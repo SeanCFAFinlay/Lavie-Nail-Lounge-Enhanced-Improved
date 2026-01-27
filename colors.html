@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Color Palette & Wheel – La Vie Nail Lounge</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <meta name="description" content="Explore over 200 colour options for your next manicure or pedicure. Choose your favourite shade from our interactive colour palette." />
     <style>
       /* Additional styles for colour palette and wheel */
@@ -214,7 +214,7 @@
       </div>
     </div>
 
-    <script src="js/interactions.js"></script>
+    <script src="interactions.js"></script>
     <script>
       // Generate 200 distinct colours using HSL for palette and wheel
       document.addEventListener('DOMContentLoaded', function () {
@@ -264,15 +264,15 @@
         const selectedPreview = document.getElementById('selectedInspiration');
         // Array of nail look images with alt text
         const inspirationData = [
-          { src: 'assets/images/1.jpg', alt: 'Pink & gem nails' },
-          { src: 'assets/images/2.jpg', alt: 'Pink floral design' },
-          { src: 'assets/images/3.jpg', alt: 'Blue butterfly nails' },
-          { src: 'assets/images/5.jpg', alt: 'Gold & pearl nails' },
-          { src: 'assets/images/6.jpg', alt: 'Black & red rose nails' },
-          { src: 'assets/images/9.jpg', alt: 'Colour swirl nails' },
-          { src: 'assets/images/26.jpg', alt: 'Lash extension' },
-          { src: 'assets/images/35.jpg', alt: 'White swirl nails' },
-          { src: 'assets/images/1717607568416-Lavielg.webp', alt: 'Golden crystal nails' }
+          { src: '1.jpg', alt: 'Pink & gem nails' },
+          { src: '2.jpg', alt: 'Pink floral design' },
+          { src: '3.jpg', alt: 'Blue butterfly nails' },
+          { src: '5.jpg', alt: 'Gold & pearl nails' },
+          { src: '6.jpg', alt: 'Black & red rose nails' },
+          { src: '9.jpg', alt: 'Colour swirl nails' },
+          { src: '26.jpg', alt: 'Lash extension' },
+          { src: '35.jpg', alt: 'White swirl nails' },
+          { src: '1717607568416-Lavielg.webp', alt: 'Golden crystal nails' }
         ];
         inspirationData.forEach(function (data) {
           const img = document.createElement('img');
