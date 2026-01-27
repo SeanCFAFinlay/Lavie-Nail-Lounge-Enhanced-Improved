@@ -645,3 +645,92 @@ footer {
     gap: 0.8rem;
   }
 }
+
+/* -------------------------------------------------------------------------
+   Additional responsive design tweaks
+   These rules ensure the layout adapts gracefully on tablets and phones.
+   They adjust grid layouts, navigation alignment and element sizing to
+   improve usability on narrower screens.
+------------------------------------------------------------------------- */
+
+/* Tablet layout adjustments */
+@media (max-width: 992px) {
+  /* Allow navigation items to wrap when space is limited */
+  header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  /* Reduce padding around sections to conserve space */
+  .services,
+  .gallery,
+  .products,
+  .locations,
+  .promotions,
+  .schedule-section {
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* Mobile layout adjustments */
+@media (max-width: 768px) {
+  /* Stack header elements and align navigation vertically */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  /* Collapse grids to single column for easier reading */
+  .service-cards,
+  .product-cards,
+  .promo-cards,
+  .location-list {
+    grid-template-columns: 1fr;
+  }
+  /* Adjust hero and slider sizing for smaller screens */
+  .hero {
+    padding: 3rem 1rem;
+  }
+  .hero-slide img {
+    height: 280px;
+  }
+  .hero-caption h1 {
+    font-size: 1.75rem;
+  }
+  .hero-caption p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small phone layout adjustments */
+@media (max-width: 480px) {
+  /* Further reduce padding on very small screens */
+  .services,
+  .gallery,
+  .products,
+  .locations,
+  .promotions,
+  .schedule-section {
+    padding: 2rem 1rem;
+  }
+  /* Adjust card images for narrow width */
+  .product-card img,
+  .service-card img,
+  .promo-card img {
+    height: 200px;
+  }
+  .location-card iframe {
+    height: 200px;
+  }
+  /* Resize headings to prevent overflow */
+  .services h2,
+  .gallery h2,
+  .products h2,
+  .locations h2,
+  .promotions h2 {
+    font-size: 1.75rem;
+  }
+}
