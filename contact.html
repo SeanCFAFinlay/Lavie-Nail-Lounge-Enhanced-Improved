@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us – La Vie Nail Lounge</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="description" content="Get in touch with La Vie Nail Lounge. Find contact details for our Fleetwood, Newton and Langley locations or send us a message via our contact form." />
+  </head>
+  <body>
+    <header>
+      <div class="logo">La Vie Nail Lounge</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="promotions.html">Promotions</a></li>
+          <li><a href="payment.html">Payment</a></li>
+          <li><a href="products.html">Products</a></li>
+          <!-- Added Team page link -->
+          <li><a href="team.html">Team</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="btn btn-primary" data-book="general">Book Now</a>
+    </header>
+
+    <section class="services">
+      <h2>Contact Us</h2>
+      <p>
+        We’d love to hear from you. Call us at your preferred location or
+        send us a message using the form below and we’ll get back to you as
+        soon as possible.
+      </p>
+      <div class="service-cards">
+        <div class="service-card">
+          <h3>Fleetwood</h3>
+          <p>15988 Fraser Hwy Unit #202<br />Surrey, BC V4N 0X8</p>
+          <p><strong>Phone:</strong> <a href="tel:+17785653515">+1 (778) 565‑3515</a></p>
+          <p><strong>Email:</strong> <a href="mailto:fleetwood@lavienaillounge.ca">fleetwood@lavienaillounge.ca</a></p>
+          <!-- Call us button for quick dial -->
+          <a href="tel:+17785653515" class="btn btn-primary" style="margin-top:0.8rem;">Call Us</a>
+        </div>
+        <div class="service-card">
+          <h3>Newton</h3>
+          <p>7218 King George Blvd #118<br />Surrey, BC V3W 5A5</p>
+          <p><strong>Phone:</strong> <a href="tel:+17785921049">+1 (778) 592‑1049</a></p>
+          <p><strong>Email:</strong> <a href="mailto:newton@lavienaillounge.ca">newton@lavienaillounge.ca</a></p>
+          <!-- Call us button for quick dial -->
+          <a href="tel:+17785921049" class="btn btn-primary" style="margin-top:0.8rem;">Call Us</a>
+        </div>
+        <div class="service-card">
+          <h3>Langley</h3>
+          <p>19855 88 Ave #107<br />Langley, BC V1M 0A5</p>
+          <p><strong>Phone:</strong> <a href="tel:+17787260888">+1 (778) 726‑0888</a></p>
+          <p><strong>Email:</strong> <a href="mailto:langley@lavienaillounge.ca">langley@lavienaillounge.ca</a></p>
+          <!-- Call us button for quick dial -->
+          <a href="tel:+17787260888" class="btn btn-primary" style="margin-top:0.8rem;">Call Us</a>
+        </div>
+      </div>
+      <h2>Send a Message</h2>
+      <form action="mailto:info@lavienaillounge.ca" method="post" enctype="text/plain" style="margin-top:1.5rem;">
+        <div style="display:flex; flex-direction:column; gap:0.8rem; max-width:500px;">
+          <input type="text" name="name" placeholder="Your Name" required style="padding:0.5rem;border-radius:0.3rem;border:1px solid var(--soft-pink);">
+          <input type="email" name="email" placeholder="Your Email" required style="padding:0.5rem;border-radius:0.3rem;border:1px solid var(--soft-pink);">
+          <textarea name="message" rows="5" placeholder="Your Message" required style="padding:0.5rem;border-radius:0.3rem;border:1px solid var(--soft-pink);"></textarea>
+          <button type="submit" class="btn btn-primary" style="width:fit-content;">Send</button>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> La Vie Nail Lounge. All rights reserved.</p>
+    </footer>
+
+    <!-- Scheduler Modal -->
+    <div id="scheduleModal" class="modal">
+      <div class="modal-content">
+        <button class="modal-close">Close</button>
+        <iframe id="scheduleIframe" title="Booking Schedule"></iframe>
+      </div>
+    </div>
+
+    <script src="js/interactions.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

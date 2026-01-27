@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery – La Vie Nail Lounge</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="description" content="Browse our gallery of nail designs, extensions, pedicures and lash looks. Filter by category and find inspiration for your next appointment." />
+  </head>
+  <body>
+    <header>
+      <div class="logo">La Vie Nail Lounge</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="promotions.html">Promotions</a></li>
+          <li><a href="payment.html">Payment</a></li>
+          <li><a href="products.html">Products</a></li>
+          <!-- Team page for staff introductions -->
+          <li><a href="team.html">Team</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="btn btn-primary" data-book="general">Book Now</a>
+    </header>
+
+    <section class="gallery">
+      <h2>Inspiration Gallery</h2>
+      <div class="gallery-filters">
+        <button data-category="all">All</button>
+        <button data-category="gelx">Gel‑X</button>
+        <button data-category="extension">Extensions</button>
+        <button data-category="pedicure">Pedicure</button>
+        <button data-category="nailart">Nail Art</button>
+        <button data-category="lash">Lashes</button>
+        <button data-category="headspa">Head Spa</button>
+        <button data-category="shellac">Shellac</button>
+        <button data-category="waxing">Waxing</button>
+      </div>
+      <div class="gallery-grid">
+        <!-- Real imagery gallery items -->
+        <div class="gallery-item" data-categories="gelx,nailart">
+          <img src="assets/images/1.jpg" alt="Pink & gem nails" />
+          <div class="overlay">
+            <button class="btn" data-book="Gel‑X">Get This Look</button>
+          </div>
+        </div>
+        <div class="gallery-item" data-categories="nailart">
+          <img src="assets/images/2.jpg" alt="Pink floral nails" />
+          <div class="overlay">
+            <button class="btn" data-book="Nail Art">Get This Look</button>
+          </div>
+        </div>
+        <div class="gallery-item" data-categories="gelx,nailart">
+          <img src="assets/images/3.jpg" alt="Blue butterfly nails" />
+          <div class="overlay">
+            <button class="btn" data-book="Gel‑X">Get This Look</button>
+          </div>
+        </div>
+        <div class="gallery-item" data-categories="extension,nailart">
+          <img src="assets/images/5.jpg" alt="Gold & pearl nails" />
+          <div class="overlay">
+            <button class="btn" data-book="Nail Extension">Get This Look</button>
+          </div>
+        </div>
+        <div class="gallery-item" data-categories="nailart">
+          <img src="assets/images/6.jpg" alt="Black & red rose nails" />
+          <div class="overlay">
+            <button class="btn" data-book="Nail Art">Get This Look</button>
+          </div>
+        </div>
+        <div class="gallery-item" data-categories="nailart,shellac">
+          <img src="assets/images/9.jpg" alt="Colour swirl nails" />
+          <div class="overlay">
+            <button class="btn" data-book="Shellac">Get This Look</button>
+          </div>
+        </div>
+        <div class="gallery-item" data-categories="lash">
+          <img src="assets/images/26.jpg" alt="Lash extensions look" />
+          <div class="overlay">
+            <button class="btn" data-book="Lash Extensions">Get This Look</button>
+          </div>
+        </div>
+        <div class="gallery-item" data-categories="nailart">
+          <img src="assets/images/35.jpg" alt="White swirl nails" />
+          <div class="overlay">
+            <button class="btn" data-book="Nail Art">Get This Look</button>
+          </div>
+        </div>
+        <div class="gallery-item" data-categories="gelx,nailart,extension">
+          <img src="assets/images/1717607568416-Lavielg.webp" alt="Golden crystal nails" />
+          <div class="overlay">
+            <button class="btn" data-book="Gel‑X">Get This Look</button>
+          </div>
+        </div>
+        <!-- Additional items for pedicure, head spa and waxing using placeholder imagery -->
+        <div class="gallery-item" data-categories="pedicure">
+          <img src="assets/images/product1.png" alt="Luxury pedicure package" />
+          <div class="overlay">
+            <button class="btn" data-book="Pedicure">Get This Look</button>
+          </div>
+        </div>
+        <div class="gallery-item" data-categories="headspa">
+          <img src="assets/images/product2.png" alt="Head spa treatment" />
+          <div class="overlay">
+            <button class="btn" data-book="Head Spa">Get This Look</button>
+          </div>
+        </div>
+        <div class="gallery-item" data-categories="waxing">
+          <img src="assets/images/hero.png" alt="Waxing services example" />
+          <div class="overlay">
+            <button class="btn" data-book="Waxing">Get This Look</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> La Vie Nail Lounge. All rights reserved.</p>
+    </footer>
+
+    <!-- Scheduler Modal -->
+    <div id="scheduleModal" class="modal">
+      <div class="modal-content">
+        <button class="modal-close">Close</button>
+        <iframe id="scheduleIframe" title="Booking Schedule"></iframe>
+      </div>
+    </div>
+
+    <script src="js/interactions.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

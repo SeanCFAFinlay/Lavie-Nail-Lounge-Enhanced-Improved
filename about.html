@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us – La Vie Nail Lounge</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="description" content="Learn about La Vie Nail Lounge’s mission, values and team. Discover our dedication to hygiene, luxury and customer satisfaction." />
+  </head>
+  <body>
+    <header>
+      <div class="logo">La Vie Nail Lounge</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="promotions.html">Promotions</a></li>
+          <li><a href="payment.html">Payment</a></li>
+          <li><a href="products.html">Products</a></li>
+          <!-- Include dedicated Team page in the menu -->
+          <li><a href="team.html">Team</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="btn btn-primary" data-book="general">Book Now</a>
+    </header>
+
+    <section class="services">
+      <h2>Our Story</h2>
+      <p>
+        La Vie Nail Lounge was founded with a simple mission: to provide
+        exceptional nail and beauty services in a welcoming, luxurious
+        environment. We believe every client deserves to feel pampered and
+        confident. Our team of licensed technicians continually updates their
+        skills and techniques to offer you the latest trends while
+        maintaining the highest standards of hygiene and safety.
+      </p>
+      <h2>Hygiene & Safety</h2>
+      <p>
+        We take sanitation seriously. All instruments are sterilised using
+        hospital‑grade autoclaves and sealed for your protection. Files and
+        buffers are single‑use and disposed of after each client. Our
+        pedicure chairs are cleaned and disinfected between appointments.
+        Your health and peace of mind are our top priority.
+      </p>
+      <h2>Meet the Team</h2>
+      <p>
+        Our talented technicians come from diverse backgrounds but share a
+        passion for beauty and customer care. Each member of our team is
+        certified in their specialty, whether that’s Gel‑X, acrylic, nail art,
+        lash extensions or skincare. We foster a culture of continuous
+        education to ensure you receive the best service possible.
+      </p>
+      <!-- Team roster added to highlight our professionals -->
+      <ul style="max-width:600px; margin:0 auto 2rem; color:var(--charcoal); list-style:none; padding:0; display:flex; flex-wrap:wrap; justify-content:center; gap:1rem;">
+        <li style="flex:1 1 120px; text-align:center; font-weight:600;">Julie</li>
+        <li style="flex:1 1 120px; text-align:center; font-weight:600;">Tony</li>
+        <li style="flex:1 1 120px; text-align:center; font-weight:600;">Vivian</li>
+        <li style="flex:1 1 120px; text-align:center; font-weight:600;">Emma</li>
+        <li style="flex:1 1 120px; text-align:center; font-weight:600;">Jenny</li>
+        <li style="flex:1 1 120px; text-align:center; font-weight:600;">Nancy</li>
+        <li style="flex:1 1 120px; text-align:center; font-weight:600;">Joseph</li>
+        <li style="flex:1 1 120px; text-align:center; font-weight:600;">Emily</li>
+        <li style="flex:1 1 120px; text-align:center; font-weight:600;">Nga</li>
+        <li style="flex:1 1 120px; text-align:center; font-weight:600;">Kelly</li>
+        <li style="flex:1 1 120px; text-align:center; font-weight:600;">Sunny</li>
+        <li style="flex:1 1 120px; text-align:center; font-weight:600;">Cathy</li>
+        <li style="flex:1 1 120px; text-align:center; font-weight:600;">Ly</li>
+        <li style="flex:1 1 120px; text-align:center; font-weight:600;">Phuc</li>
+        <li style="flex:1 1 120px; text-align:center; font-weight:600;">Ngoc</li>
+        <li style="flex:1 1 120px; text-align:center; font-weight:600;">Serena</li>
+        <li style="flex:1 1 120px; text-align:center; font-weight:600;">Thao</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> La Vie Nail Lounge. All rights reserved.</p>
+    </footer>
+
+    <!-- Scheduler Modal -->
+    <div id="scheduleModal" class="modal">
+      <div class="modal-content">
+        <button class="modal-close">Close</button>
+        <iframe id="scheduleIframe" title="Booking Schedule"></iframe>
+      </div>
+    </div>
+
+    <script src="js/interactions.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

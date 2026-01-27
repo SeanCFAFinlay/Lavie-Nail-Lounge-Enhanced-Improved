@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products – La Vie Nail Lounge</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="description" content="Discover the premium products used at La Vie Nail Lounge. From nourishing cuticle oils and long‑wear gel polishes to relaxing spa essentials, explore our curated collection." />
+  </head>
+  <body>
+    <header>
+      <div class="logo">La Vie Nail Lounge</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="promotions.html">Promotions</a></li>
+          <li><a href="payment.html">Payment</a></li>
+          <li><a href="products.html">Products</a></li>
+          <!-- Insert Team page into navigation -->
+          <li><a href="team.html">Team</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="btn btn-primary" data-book="general">Book Now</a>
+    </header>
+
+    <section class="products">
+      <h2>Our Favourite Products</h2>
+      <p style="text-align:center; max-width:650px; margin:0 auto 2rem; color: var(--charcoal);">
+        At La Vie Nail Lounge, we use carefully selected products to ensure the health and beauty of your nails, lashes and skin. Browse a few of our favourites below.
+      </p>
+      <div class="product-cards">
+        <!-- Nail Care -->
+        <div class="product-card">
+          <img src="assets/images/product1.png" alt="Cuticle oil and nail care products" />
+          <div class="product-content">
+            <h3>Nail & Cuticle Care</h3>
+            <p>
+              Hydrate and strengthen your nails with our nourishing cuticle oils, strengthening serums and vitamin‑infused base coats. Perfect for maintaining healthy natural nails between services.
+            </p>
+            <ul>
+              <li>Vitamin E Cuticle Oil</li>
+              <li>Keratin Nail Strengthener</li>
+              <li>Calcium Base Coat</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Gel & Colour -->
+        <div class="product-card">
+          <img src="assets/images/product2.png" alt="Gel polish bottles" />
+          <div class="product-content">
+            <h3>Gel & Colour Collection</h3>
+            <p>
+              From classic nudes to bold seasonal hues, our gel polish selection offers long‑lasting, chip‑resistant colour with high shine. We stock over 200 shades to complement any style.
+            </p>
+            <ul>
+              <li>UV/LED Gel Polish</li>
+              <li>Chrome Powders</li>
+              <li>Glitter Top Coats</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Spa Essentials -->
+        <div class="product-card">
+          <img src="assets/images/contact.png" alt="Relaxing spa essentials" />
+          <div class="product-content">
+            <h3>Spa Essentials</h3>
+            <p>
+              Recreate the spa experience at home with our selection of masks, scrubs and lotions. Formulated with natural extracts to soften, soothe and rejuvenate.
+            </p>
+            <ul>
+              <li>Hydrating Foot Mask</li>
+              <li>Exfoliating Sugar Scrub</li>
+              <li>Rose & Lavender Body Lotion</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> La Vie Nail Lounge. All rights reserved.</p>
+    </footer>
+
+    <!-- Scheduler Modal -->
+    <div id="scheduleModal" class="modal">
+      <div class="modal-content">
+        <button class="modal-close">Close</button>
+        <iframe id="scheduleIframe" title="Booking Schedule"></iframe>
+      </div>
+    </div>
+
+    <script src="js/interactions.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

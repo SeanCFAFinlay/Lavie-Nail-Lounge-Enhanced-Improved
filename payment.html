@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment – La Vie Nail Lounge</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta
+      name="description"
+      content="Securely purchase gift cards or pay your deposit with La Vie Nail Lounge. All transactions are processed through a trusted payment provider."
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">La Vie Nail Lounge</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="promotions.html">Promotions</a></li>
+          <li><a href="payment.html">Payment</a></li>
+          <li><a href="products.html">Products</a></li>
+          <!-- Added Team page link -->
+          <li><a href="team.html">Team</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="btn btn-primary" data-book="general">Book Now</a>
+    </header>
+
+    <section class="services">
+      <h2>Secure Payment Options</h2>
+      <p style="text-align:center; max-width:650px; margin:0 auto 1.5rem; color: var(--charcoal);">
+        We use trusted payment providers to keep your transactions safe. Choose your preferred method below. Please note: these buttons are placeholders – replace the links with your own Stripe or PayPal checkout URLs.
+      </p>
+      <div class="service-cards">
+        <div class="service-card">
+          <h3>Pay with Stripe</h3>
+          <p>
+            Checkout quickly and securely using Stripe. Accepts all major credit and debit cards worldwide. Click below to continue to our encrypted payment form.
+          </p>
+          <!-- Replace href with your live Stripe checkout link -->
+          <a href="#" class="btn btn-secondary" style="margin-top:0.8rem;">Pay via Stripe</a>
+        </div>
+        <div class="service-card">
+          <h3>Pay with PayPal</h3>
+          <p>
+            Use your PayPal account or pay as a guest with credit card. PayPal offers buyer protection and a familiar checkout experience. Click below to proceed.
+          </p>
+          <!-- Replace href with your live PayPal payment link or invoice -->
+          <a href="#" class="btn btn-secondary" style="margin-top:0.8rem;">Pay via PayPal</a>
+        </div>
+        <div class="service-card">
+          <h3>Purchase Gift Card</h3>
+          <p>
+            Surprise someone with a digital gift card for any service. Choose the amount and personalise your message. Gift cards are delivered instantly via email and never expire.
+          </p>
+          <!-- Replace href with your gift card purchase link -->
+          <a href="#" class="btn btn-secondary" style="margin-top:0.8rem;">Buy Gift Card</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> La Vie Nail Lounge. All rights reserved.</p>
+    </footer>
+
+    <!-- Scheduler Modal -->
+    <div id="scheduleModal" class="modal">
+      <div class="modal-content">
+        <button class="modal-close">Close</button>
+        <iframe id="scheduleIframe" title="Booking Schedule"></iframe>
+      </div>
+    </div>
+
+    <script src="js/interactions.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Palette & Wheel – La Vie Nail Lounge</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="description" content="Explore over 200 colour options for your next manicure or pedicure. Choose your favourite shade from our interactive colour palette." />
+    <style>
+      /* Additional styles for colour palette and wheel */
+      .palette-section {
+        padding: 4rem 2rem;
+        background-color: var(--blush);
+        text-align: center;
+      }
+      .palette-section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--charcoal);
+      }
+      .palette-section p {
+        margin-bottom: 2rem;
+        color: var(--charcoal);
+      }
+      .color-palette {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .swatch {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+      }
+      .swatch:hover {
+        transform: scale(1.15);
+      }
+      .swatch.selected {
+        border-color: var(--gold);
+        transform: scale(1.25);
+      }
+      #selectedColorInfo {
+        margin-top: 1.5rem;
+        font-weight: 600;
+        color: var(--charcoal);
+      }
+
+      /* Colour wheel section */
+      .wheel-section {
+        padding: 4rem 2rem;
+        background-color: var(--blush);
+        text-align: center;
+        border-top: 1px solid #e6d4d2;
+      }
+      .wheel-section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--charcoal);
+      }
+      .wheel-section p {
+        max-width: 600px;
+        margin: 0 auto 2rem;
+        color: var(--charcoal);
+      }
+      .wheel-container {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+      }
+      .color-wheel {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 0;
+        height: 0;
+      }
+      .wheel-swatch {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+        border: 2px solid transparent;
+      }
+      .wheel-swatch.selected {
+        border-color: var(--gold);
+        transform: scale(1.25);
+      }
+
+      /* Inspiration section styles */
+      .inspiration-section {
+        padding: 4rem 2rem;
+        background-color: var(--blush);
+        text-align: center;
+        border-bottom: 1px solid #e6d4d2;
+      }
+      .inspiration-section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--charcoal);
+      }
+      .inspiration-section p {
+        max-width: 600px;
+        margin: 0 auto 2rem;
+        color: var(--charcoal);
+      }
+      .inspiration-images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .inspiration-images img {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+      }
+      .inspiration-images img:hover {
+        transform: scale(1.1);
+      }
+      .inspiration-images img.selected {
+        border-color: var(--gold);
+        transform: scale(1.15);
+      }
+      .selected-inspiration {
+        margin-top: 1.5rem;
+      }
+      .selected-inspiration img {
+        max-width: 300px;
+        width: 100%;
+        border-radius: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">La Vie Nail Lounge</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="promotions.html">Promotions</a></li>
+          <li><a href="payment.html">Payment</a></li>
+          <!-- Team page for our staff profiles -->
+          <li><a href="team.html">Team</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="btn btn-primary" data-book="general">Book Now</a>
+    </header>
+
+    <!-- Inspiration section with actual nail colour photos -->
+    <section class="inspiration-section">
+      <h2>Colour Inspiration</h2>
+      <p>
+        Explore real nail art looks from our artists. Click on any photo below to
+        preview it in full. These images showcase some of our most popular
+        colourways and designs. Select one to see it up close!
+      </p>
+      <div id="inspirationImages" class="inspiration-images"></div>
+      <div id="selectedInspiration" class="selected-inspiration"></div>
+    </section>
+
+    <section class="palette-section">
+      <h2>Colour Palette</h2>
+      <p>
+        Pick from over 200 vibrant shades. Click on any circle below to select
+        your next nail colour. The selected colour code will appear below.
+      </p>
+      <div id="colorPalette" class="color-palette"></div>
+      <div id="selectedColorInfo">Select a colour to see its code</div>
+    </section>
+
+    <!-- Colour wheel: interactive circular palette -->
+    <section class="wheel-section">
+      <h2>Colour Wheel</h2>
+      <p>
+        Rotate around our palette to discover your perfect shade. Click any swatch on the wheel to select and preview it.
+      </p>
+      <div class="wheel-container">
+        <div id="colorWheel" class="color-wheel"></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> La Vie Nail Lounge. All rights reserved.</p>
+    </footer>
+
+    <!-- Scheduler Modal -->
+    <div id="scheduleModal" class="modal">
+      <div class="modal-content">
+        <button class="modal-close">Close</button>
+        <iframe id="scheduleIframe" title="Booking Schedule"></iframe>
+      </div>
+    </div>
+
+    <script src="js/interactions.js"></script>
+    <script>
+      // Generate 200 distinct colours using HSL for palette and wheel
+      document.addEventListener('DOMContentLoaded', function () {
+        const palette = document.getElementById('colorPalette');
+        const wheel = document.getElementById('colorWheel');
+        const info = document.getElementById('selectedColorInfo');
+        const total = 200;
+        const radius = 120; // radius for wheel placement
+        for (let i = 0; i < total; i++) {
+          const hue = Math.floor((360 / total) * i);
+          const color = `hsl(${hue}, 70%, 60%)`;
+          // Create palette swatch
+          const swatch = document.createElement('div');
+          swatch.className = 'swatch';
+          swatch.style.backgroundColor = color;
+          swatch.setAttribute('data-color', color);
+          swatch.addEventListener('click', function () {
+            // remove existing selections from palette and wheel
+            document.querySelectorAll('.swatch.selected, .wheel-swatch.selected').forEach(function (el) {
+              el.classList.remove('selected');
+            });
+            swatch.classList.add('selected');
+            info.textContent = color;
+          });
+          palette.appendChild(swatch);
+          // Create wheel swatch
+          const angle = (i / total) * Math.PI * 2;
+          const x = radius * Math.cos(angle);
+          const y = radius * Math.sin(angle);
+          const wSwatch = document.createElement('div');
+          wSwatch.className = 'wheel-swatch';
+          wSwatch.style.backgroundColor = color;
+          wSwatch.style.transform = `translate(${x}px, ${y}px)`;
+          wSwatch.setAttribute('data-color', color);
+          wSwatch.addEventListener('click', function () {
+            // remove existing selections from palette and wheel
+            document.querySelectorAll('.swatch.selected, .wheel-swatch.selected').forEach(function (el) {
+              el.classList.remove('selected');
+            });
+            wSwatch.classList.add('selected');
+            info.textContent = color;
+          });
+          wheel.appendChild(wSwatch);
+        }
+        // Populate inspiration images using actual nail photos
+        const inspirationContainer = document.getElementById('inspirationImages');
+        const selectedPreview = document.getElementById('selectedInspiration');
+        // Array of nail look images with alt text
+        const inspirationData = [
+          { src: 'assets/images/1.jpg', alt: 'Pink & gem nails' },
+          { src: 'assets/images/2.jpg', alt: 'Pink floral design' },
+          { src: 'assets/images/3.jpg', alt: 'Blue butterfly nails' },
+          { src: 'assets/images/5.jpg', alt: 'Gold & pearl nails' },
+          { src: 'assets/images/6.jpg', alt: 'Black & red rose nails' },
+          { src: 'assets/images/9.jpg', alt: 'Colour swirl nails' },
+          { src: 'assets/images/26.jpg', alt: 'Lash extension' },
+          { src: 'assets/images/35.jpg', alt: 'White swirl nails' },
+          { src: 'assets/images/1717607568416-Lavielg.webp', alt: 'Golden crystal nails' }
+        ];
+        inspirationData.forEach(function (data) {
+          const img = document.createElement('img');
+          img.src = data.src;
+          img.alt = data.alt;
+          img.addEventListener('click', function () {
+            // Remove previous selections
+            inspirationContainer.querySelectorAll('img.selected').forEach(function (el) {
+              el.classList.remove('selected');
+            });
+            img.classList.add('selected');
+            // Update preview
+            selectedPreview.innerHTML = '';
+            const big = document.createElement('img');
+            big.src = data.src;
+            big.alt = data.alt;
+            selectedPreview.appendChild(big);
+          });
+          inspirationContainer.appendChild(img);
+        });
+
+        // Set copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+      });
+    </script>
+  </body>
+</html>

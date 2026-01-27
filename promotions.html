@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promotions – La Vie Nail Lounge</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="description" content="Discover the latest promotions at La Vie Nail Lounge. Save on Gel‑X, pedicures, lash extensions and more with our monthly specials and packages." />
+  </head>
+  <body>
+    <header>
+      <div class="logo">La Vie Nail Lounge</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="locations.html">Locations</a></li>
+          <li><a href="promotions.html">Promotions</a></li>
+          <li><a href="payment.html">Payment</a></li>
+          <li><a href="products.html">Products</a></li>
+          <!-- Added Team page to the menu -->
+          <li><a href="team.html">Team</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="btn btn-primary" data-book="general">Book Now</a>
+    </header>
+
+    <section class="promotions">
+      <h2>Current Promotions</h2>
+      <div class="promo-cards">
+        <div class="promo-card">
+          <img src="assets/images/1.jpg" alt="Gel‑X new set nails" />
+          <div class="promo-content">
+            <h4>Gel‑X New Set Special</h4>
+            <p>
+              Receive 15% off a complete Gel‑X new set. Includes consultation,
+              tip application, shaping and Shellac colour. Perfect for first‑time
+              clients looking to experience the flexibility of Gel‑X.
+            </p>
+            <a href="#" class="btn btn-secondary" data-book="Gel‑X">Book Now</a>
+          </div>
+        </div>
+        <div class="promo-card">
+          <img src="assets/images/5.jpg" alt="Deluxe pedicure nails" />
+          <div class="promo-content">
+            <h4>Deluxe Pedicure Upgrade</h4>
+            <p>
+              Book a classic pedicure and upgrade to our deluxe package
+              (including mask, hot stone massage and paraffin) at no extra charge.
+              Treat your feet to the ultimate spa experience.
+            </p>
+            <a href="#" class="btn btn-secondary" data-book="Pedicure">Book Now</a>
+          </div>
+        </div>
+        <div class="promo-card">
+          <img src="assets/images/9.jpg" alt="Colourful lash and brow combo" />
+          <div class="promo-content">
+            <h4>Lash & Brow Combo</h4>
+            <p>
+              Combine classic lash extensions with professional brow shaping and
+              tinting. Save 20% when you book both services together during
+              this month.
+            </p>
+            <a href="#" class="btn btn-secondary" data-book="Lash Extensions">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> La Vie Nail Lounge. All rights reserved.</p>
+    </footer>
+
+    <!-- Scheduler Modal -->
+    <div id="scheduleModal" class="modal">
+      <div class="modal-content">
+        <button class="modal-close">Close</button>
+        <iframe id="scheduleIframe" title="Booking Schedule"></iframe>
+      </div>
+    </div>
+
+    <script src="js/interactions.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
