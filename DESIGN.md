@@ -296,6 +296,9 @@ deferred script, no frameworks and no build step.
 
 ## 8. Missing content and assets
 
+> Tracked as a working checklist in [`TODO.md`](TODO.md). This section holds the
+> background and reasoning; TODO.md is the list to work from.
+
 Ordered by how much each blocks launch.
 
 1. **Client testimonials — still outstanding.** The section no longer shows an unfinished

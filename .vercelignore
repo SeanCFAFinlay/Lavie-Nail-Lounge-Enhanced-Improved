@@ -6,6 +6,7 @@
 
 # Internal production documentation, not website content.
 /DESIGN.md
+/TODO.md
 
 # Build tooling and its inputs. The site serves assets/img/ derivatives only;
 # the root-level originals are build sources and are not referenced at runtime.
