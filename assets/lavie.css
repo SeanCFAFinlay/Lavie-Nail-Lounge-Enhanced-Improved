@@ -42,7 +42,7 @@
   /* Space */
   --sp-1: .5rem;  --sp-2: 1rem;   --sp-3: 1.5rem; --sp-4: 2rem;
   --sp-5: 3rem;   --sp-6: 4.5rem; --sp-7: 6.5rem; --sp-8: 9rem;
-  --section-y: clamp(3.25rem, 5.4vw, 5.5rem);
+  --section-y: clamp(2.75rem, 4.2vw, 4.5rem);
 
   /* Layout */
   --maxw: 1320px;
@@ -346,12 +346,15 @@ em.accent { font-style: italic; color: var(--merlot); }
 /* ---------- 10. INTRO (quiet editorial spread) ---------- */
 .intro { background: var(--pearl); }
 .intro__grid { align-items: start; }
-.intro__label { grid-column: 1 / 3; }
-.intro__stmt { grid-column: 3 / 10; }
-.intro__stmt .display { margin-bottom: clamp(1.4rem,2.6vw,2.2rem); }
-.intro__body { grid-column: 3 / 7; }
-.intro__fig { grid-column: 10 / 13; align-self: end; }
-.intro__fig img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: var(--r-arch); }
+/* The figure spans both content rows so the right-hand column carries image rather
+   than empty page, which is where most of the section's dead space used to sit. */
+.intro__grid { row-gap: clamp(1.2rem,2vw,1.8rem); }
+.intro__label { grid-column: 1 / 13; }
+.intro__stmt { grid-column: 1 / 9; }
+.intro__stmt .display { margin-bottom: 0; }
+.intro__body { grid-column: 1 / 6; }
+.intro__fig { grid-column: 9 / 13; grid-row: 2 / 4; align-self: stretch; display: flex; flex-direction: column; }
+.intro__fig img { width: 100%; flex: 1; min-height: 260px; object-fit: cover; border-radius: var(--r-arch); }
 .intro__fig figcaption { font-size: var(--fs-label); letter-spacing: .14em; text-transform: uppercase; color: var(--text-muted); padding-top: .9rem; }
 
 /* facts strip */
@@ -429,26 +432,26 @@ em.accent { font-style: italic; color: var(--merlot); }
 .gal__filters button:hover { border-color: var(--ink); }
 .gal__filters button[aria-pressed="true"] { background: var(--ink); color: var(--pearl); border-color: var(--ink); }
 
-.gal__grid { display: grid; grid-template-columns: repeat(12,1fr); gap: clamp(.7rem,1.5vw,1.4rem); }
-.gal__fig { position: relative; margin: 0; grid-column: span 4; }
+/* Every tile is 4:5 and three columns wide; the feature is six wide and two rows tall,
+   which is exactly two tiles plus the gap. The grid therefore tiles solid with no holes. */
+.gal__grid { display: grid; grid-template-columns: repeat(12,1fr); gap: clamp(.5rem,.9vw,.85rem); }
+.gal__fig { position: relative; margin: 0; grid-column: span 3; }
 .gal__fig--feature { grid-column: span 6; grid-row: span 2; }
-.gal__fig--tall { grid-column: span 3; }
-.gal__fig--wide { grid-column: span 6; }
 .gal__fig[hidden] { display: none; }
-/* The arch is reserved for the feature image; supporting tiles stay square so the
-   motif reads as deliberate rather than decorative. */
+/* The arch is carried by the hero, the intro figure, the service stage and the favicon.
+   Inside a tiled grid its dome cut triangular gaps against neighbouring tiles, so the
+   gallery stays square - restraint the brief asks for, and no holes. */
 .gal__open {
   display: block; width: 100%; height: 100%; padding: 0; border: 0; background: none;
   cursor: pointer; position: relative; overflow: hidden; border-radius: var(--r-soft);
 }
-.gal__fig--feature .gal__open { border-radius: var(--r-arch); }
+
 .gal__open img {
   width: 100%; height: 100%; object-fit: cover;
   transition: transform var(--d-section) var(--e-editorial), filter var(--d-section) var(--e-editorial);
 }
-.gal__fig--feature .gal__open { aspect-ratio: 4/5; }
-.gal__fig:not(.gal__fig--feature) .gal__open { aspect-ratio: 1/1; }
-.gal__fig--tall .gal__open { aspect-ratio: 3/4.4; }
+.gal__open { aspect-ratio: 4/5; }
+.gal__fig--feature, .gal__fig--feature .gal__open { height: 100%; aspect-ratio: auto; }
 .gal__open:hover img { transform: scale(1.035); }
 .gal__meta {
   position: absolute; left: 0; right: 0; bottom: 0; padding: 2.6rem 1.1rem .95rem;
@@ -490,6 +493,7 @@ em.accent { font-style: italic; color: var(--merlot); }
 /* Review deck — one quote at a time, advanced manually. No autoplay: the brief
    rules out fast rotating testimonials, and a reader must be able to finish a quote. */
 .tst__deck { margin-top: clamp(1.4rem,2.4vw,2rem); }
+.tst__deck:empty { display: none; margin: 0; }
 .tst__item { margin: 0; display: none; }
 .tst__item.is-shown { display: block; }
 .tst__item blockquote {
@@ -577,7 +581,7 @@ em.accent { font-style: italic; color: var(--merlot); }
 .loc__hours li { display: flex; justify-content: space-between; gap: 1rem; padding: .35rem 0; border-bottom: 1px solid var(--rule-fine); }
 .loc__hours span { color: var(--text-muted); font-variant-numeric: tabular-nums; }
 .loc__act { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: auto; padding-top: .6rem; }
-.loc__map { width: 100%; aspect-ratio: 16/10; border: 1px solid var(--rule); border-radius: 3px; filter: grayscale(1) contrast(.92); transition: filter var(--d-section) var(--e-ui); }
+.loc__map { width: 100%; aspect-ratio: 16/9; border: 1px solid var(--rule); border-radius: 3px; filter: grayscale(1) contrast(.92); transition: filter var(--d-section) var(--e-ui); }
 .loc__map:hover { filter: none; }
 
 /* ---------- 18. FOOTER ---------- */
@@ -658,9 +662,10 @@ em.accent { font-style: italic; color: var(--merlot); }
   .facts div:nth-child(-n+2) { border-bottom: 1px solid var(--rule); }
   .std__grid { grid-template-columns: 1fr; }
   .gal__grid { grid-template-columns: repeat(2,1fr); }
-  .gal__fig, .gal__fig--feature, .gal__fig--tall, .gal__fig--wide { grid-column: span 1; grid-row: auto; }
-  .gal__fig--feature { grid-column: span 2; }
-  .gal__fig .gal__open, .gal__fig--tall .gal__open, .gal__fig--feature .gal__open { aspect-ratio: 3/4; }
+  .gal__fig { grid-column: span 1; grid-row: auto; }
+  .gal__fig--feature { grid-column: span 2; grid-row: auto; height: auto; }
+  .gal__open, .gal__fig--feature .gal__open { aspect-ratio: 4/5; height: auto; }
+  .gal__fig--feature .gal__open { aspect-ratio: 16/10; }
   /* touch: metadata must not be hover-only */
   .gal__meta { opacity: 1; transform: none; }
   .ft__top { grid-template-columns: 1fr; }

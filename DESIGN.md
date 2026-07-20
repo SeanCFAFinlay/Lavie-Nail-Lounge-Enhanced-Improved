@@ -79,6 +79,39 @@ The hero scroll cue was removed — at the tighter height it collided with the p
 ### Radius
 `--r-arch` (the motif), `--r-soft` 2px, `--r-pill` 100px.
 
+### Image treatment — revision (client feedback)
+
+Four changes after review:
+
+- **Generic stock removed.** The Head Spa slot was showing a stock spa still-life (rolled towels,
+  candles, orchids, Himalayan salt) that the brief explicitly rules out and that clashed with the
+  authentic macro photography everywhere else. Deleted. Head Spa now borrows a real salon image;
+  a genuine Head Spa photograph is listed as a missing asset.
+- **Third-party watermark cropped.** The gallery feature image carried a technician's
+  `NAILSBYTONY_T` watermark down its right edge. The source was re-cropped to 87.5% width, which
+  removes it and tightens the composition. A LaVie logo sticker was likewise cropped out of the
+  pink-floral set.
+- **Gallery regularised.** The old irregular grid (`span 4` / `span 3` / `span 6` tiles at three
+  different aspect ratios) left visible holes. Every tile is now 4:5 and three columns wide, with
+  the feature six columns and two rows — exactly two tiles plus the gap — so the grid tiles solid.
+  Gap reduced from up to 1.4rem to 0.85rem.
+- **Arch withdrawn from the gallery.** Inside a tiled grid the motif's dome cut triangular gaps
+  against neighbouring tiles. It is still carried by the hero, the intro figure, the service stage
+  and the favicon, which is the restraint the brief asks for.
+
+Unused and duplicate source files were moved to `_archive/unused-images/`: `product1.png` and
+`product2.png` (byte-identical duplicates of `contact.png` and `hero.png`), `contact.png` and
+`hero.png` (screenshots of the old website, not photography), and `cuticle_oil.png`,
+`gel_polish.png` and `spa_essentials.png` (stock product renders, unused).
+
+### Density — second pass
+
+Section rhythm reduced again to `clamp(2.75rem, 4.2vw, 4.5rem)`. The intro was restructured: the
+statement no longer sits in a middle column with an empty one to its left, and the figure now
+spans both content rows so the right-hand column carries image rather than empty page. Total page
+height fell from 8347px to 7453px (9.3 to 8.3 viewports); the gallery alone went from 1921px to
+1441px and the intro from 1062px to 884px.
+
 ---
 
 ## 3. Motion system
@@ -271,8 +304,10 @@ Ordered by how much each blocks launch.
    they exist — in particular, the badge's typography is an approximation.
 6. **Email address and social links.** Not published anywhere findable; currently omitted from the
    footer and from structured data.
-7. **Photography gaps.** No interior, team, tools or treatment-in-progress images exist. Useful
-   additions: the studio interior, a technician working, and portraits if a team section is wanted.
+7. **Photography gaps.** No interior, team, tools or treatment-in-progress images exist, and there
+   is no Head Spa, pedicure or waxing photograph — those services currently borrow nail imagery.
+   Most useful additions, in order: a Head Spa treatment, a pedicure, the studio interior, and a
+   technician working. All nine existing photographs are hand/nail or lash close-ups.
 8. **Team content.** No team section was built, because no verifiable staff information exists.
    See `_archive/README.md`.
 
