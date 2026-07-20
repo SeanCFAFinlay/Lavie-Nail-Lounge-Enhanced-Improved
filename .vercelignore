@@ -1,0 +1,15 @@
+# Keep the superseded site off the public deploy. _archive/ holds the previous
+# pages, which contain invented pricing, promotions that do not exist and
+# seventeen fabricated staff biographies. They are kept for reference only and
+# must never be reachable at a URL.
+/_archive
+
+# Internal production documentation, not website content.
+/DESIGN.md
+
+# Build tooling and its inputs. The site serves assets/img/ derivatives only;
+# the root-level originals are build sources and are not referenced at runtime.
+/tools
+/*.jpg
+/*.webp
+/*.zip
