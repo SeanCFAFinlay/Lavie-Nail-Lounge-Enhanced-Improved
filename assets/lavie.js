@@ -218,6 +218,34 @@
     }, { passive: true });
   }
 
+  /* ---------- Review deck ---------- */
+  var deck = $('#reviewDeck');
+  if (deck) {
+    var reviews = $$('.tst__item', deck);
+    var missing = $('#reviewsMissing');
+    var revNav  = $('#reviewNav');
+    var revCount= $('#revCount');
+
+    if (!reviews.length) {
+      // No real reviews supplied yet — keep the notice, hide the empty controls.
+      if (revNav) revNav.hidden = true;
+    } else {
+      if (missing) missing.hidden = true;
+      var ri = 0;
+      var showReview = function (i) {
+        ri = (i + reviews.length) % reviews.length;
+        reviews.forEach(function (r, n) { r.classList.toggle('is-shown', n === ri); });
+        if (revCount) revCount.textContent = (ri + 1) + ' / ' + reviews.length;
+      };
+      showReview(0);
+      if (reviews.length > 1 && revNav) {
+        revNav.hidden = false;
+        $('#revPrev').addEventListener('click', function () { showReview(ri - 1); });
+        $('#revNext').addEventListener('click', function () { showReview(ri + 1); });
+      }
+    }
+  }
+
   /* ---------- Mobile sticky CTA ---------- */
   var sticky = $('.sticky');
   if (sticky) {

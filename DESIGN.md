@@ -140,8 +140,13 @@ style, hover lifts the image 3.5% and reveals a caption, and an accessible light
 arrow keys, Escape, swipe and focus return. *Fallback:* on touch the caption is always visible —
 no essential information is hover-only.
 
-**Testimonials.** *Decision:* left intentionally empty with a labelled content request.
-*Reason:* fabricating reviews was not an option and no real ones were available. See §8.
+**Testimonials.** *Decision:* a built, working review deck that currently renders an
+empty-state notice. *Reason:* the section had to be production-ready without inventing content.
+*Execution:* one quote at a time with attribution (name, service, source, rating, date), advanced
+by manual prev/next — no autoplay, so a reader can finish a quote. Reviews are plain `<figure>`
+blocks in the markup; the component counts them and wires itself up, showing the notice at zero
+and hiding the navigation at one. *Fallback:* with JavaScript unavailable the first review still
+renders. See §8.1 for why it is empty and where the real reviews should come from.
 
 **FAQ.** *Decision:* placed immediately before the final CTA. *Reason:* answering operational
 questions at the decision point is what prevents abandonment. *Execution:* accessible accordion
@@ -231,10 +236,23 @@ deferred script, no frameworks and no build step.
 
 Ordered by how much each blocks launch.
 
-1. **Client testimonials — blocking.** The testimonials section is intentionally empty. Supply
-   3–5 real reviews with text, first name or initials, service booked, source, rating and date.
-   Reviews mentioning how long a set lasted, cleanliness, or a named technician are the most
-   persuasive at that point in the page.
+1. **Client testimonials — blocking.** The section is built and empty. To publish a review,
+   copy the commented `<figure class="tst__item">` template in `index.html` and fill it in.
+
+   **These must be real reviews, and they must come from the salon's own Google Business Profile
+   (or Facebook) — not from a review-aggregator site.** Two reasons. First, accuracy: aggregators
+   demonstrably mis-attribute reviews between salons. A search for LaVie's reviews returned text
+   under a `bestprosintown.com/.../magical-nails-` URL and a Trustindex page for `lavienails.net`,
+   an unrelated business; the Birdeye page for 3D Nails Spa mixes in reviews for other locations
+   and includes a one-star complaint. Any of that pasted in as a LaVie testimonial would be wrong.
+
+   Second, and more important: **inventing testimonials is not an option.** The brief prohibits it,
+   and in Canada fabricated reviews and testimonials are deceptive marketing under the Competition
+   Act, which carries administrative monetary penalties for the business. Google and Meta also
+   remove listings over fake review activity. The risk sits with the salon, not the site.
+
+   The salon holds a 5.0 Google rating, so genuine material exists — it just needs to be copied
+   from the profile the salon controls, with the reviewer's name as they published it.
 2. **Opening hours — not published.** lavienaillounge.ca has an Hours section but it was never
    populated, and no hours are published for any of the three locations. Rather than show
    unverified times as fact, the location cards now point to each salon's booking page, which
@@ -281,7 +299,8 @@ Ordered by how much each blocks launch.
 | Booking links resolve to the correct per-studio calendar | **Pass** |
 | Prices and durations match the salon's booking system | **Pass** |
 | No fabricated pricing, promotions, reviews or staff | **Pass** |
-| Testimonials populated | **Needs attention** — see §8.1 |
+| Review deck built and tested (empty + populated states) | **Pass** |
+| Testimonials populated with real reviews | **Needs attention** — see §8.1 |
 | Opening hours confirmed by the salon | **Needs attention** — see §8.2 |
 | Typography legible at functional sizes | **Pass** — reworked after client feedback |
 | Layout density | **Pass** — tightened after client feedback |
