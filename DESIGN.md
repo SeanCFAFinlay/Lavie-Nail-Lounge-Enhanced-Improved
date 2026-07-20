@@ -129,6 +129,30 @@ height fell from 8347px to 7453px (9.3 to 8.3 viewports); the gallery alone went
 Easing: `--e-editorial` `cubic-bezier(.22,1,.36,1)` for narrative motion,
 `--e-ui` `cubic-bezier(.4,0,.2,1)` for interface response.
 
+### Motion layer — revision (client feedback)
+
+The first pass was deliberately restrained and read as too static. Nine additions, all
+transform/opacity/clip-path only, all disabled wholesale under `prefers-reduced-motion`,
+none of which gate reading or booking:
+
+| Addition | What it does | Why it earns its place |
+|---|---|---|
+| Scroll progress | The lacquer line runs the full page width as you scroll | Uses the secondary motif as a real progress indicator, not decoration |
+| Heading mask reveal | Section headings rise out of a clip, 900ms | Gives each section an entrance beat instead of appearing wholesale |
+| Gallery stagger | Nine tiles settle in sequence, 60ms apart | Turns the grid into a composition being laid down rather than a block |
+| Count-up figures | 3 / 9 / 52 / 100% animate from zero, with a rule drawing beneath | The proof numbers are the argument; motion makes them land |
+| Service stage wipe | Image changes via a clip-path wipe, not a cross-fade | Echoes lacquer being drawn across a surface |
+| Active row rule | A merlot rule sweeps under the selected service | Confirms selection at the point of interaction |
+| Magnetic buttons | Primary buttons drift up to 6px toward the pointer | The tactility the brief asks for, inside its stated 4–8px limit |
+| Contextual cursor | Small ring + dot; expands to "View" on gallery tiles and "Book" on booking links | Section 27 of the brief; states are meaningful, never decorative |
+| Service ticker | A slow marquee of service names between sections, pausing on hover | An editorial band that also restates the range of services |
+| Hero parallax | Image drifts 6% of scroll with a 0.004% scale | Depth without displacement large enough to cause motion sickness |
+
+**Fallbacks verified.** Under `prefers-reduced-motion` the progress bar and cursor are never
+created at all, the ticker is static, and every element renders in final state with the real
+figures. With JavaScript disabled all nine gallery tiles, the real numbers and every heading
+render normally.
+
 Only `transform`, `opacity` and `clip-path` are animated. All reveals are one-time. Pointer
 parallax in the hero is capped at 18px of background light travel and is desktop-only. There is
 no scroll hijacking, no pinned section, no autoplay carousel and no continuous ambient motion.
@@ -197,10 +221,15 @@ Dash Booking calendar. Each location card and the footer also carry direct links
 the final CTA is on screen. *Reason:* a visitor who decides mid-page should not have to scroll
 back. *Execution:* respects `env(safe-area-inset-bottom)`; no pulsing or persistent animation.
 
-**Custom cursor / 3D element.** *Decision:* not implemented. *Reason:* neither earned its cost
-here. The brief permits both but asks that every effect justify itself; a contextual cursor would
-have added weight without helping anyone choose or book a service. Documented as a deliberate
-omission rather than an oversight.
+**Custom cursor.** *Decision:* added in the motion revision. *Reason:* the brief permits it and
+the client asked for more movement; limited to states that carry meaning. *Execution:* a small
+ring and dot that lerp toward the pointer, expanding to a filled "View" badge over gallery tiles
+and "Book" over booking links, inverting on the dark CTA field. *Fallback:* never created on
+coarse pointers or under reduced motion.
+
+**3D element.** *Decision:* still not implemented. *Reason:* the optional WebGL object would add
+a rendering dependency and payload for atmosphere the photography already supplies. The motion
+layer delivers the requested movement at a fraction of the cost.
 
 ---
 
@@ -343,7 +372,7 @@ Ordered by how much each blocks launch.
 | All three locations bookable from the site | **Pass** |
 | Third location postal code confirmed | **Needs attention** — see §8.4 |
 | Original vector logo in place | **Needs attention** — see §8.5 |
-| Cross-browser check on Safari/Firefox | **Needs attention** — verified in Chrome only |
-| Custom cursor | **Not applicable** — deliberately omitted, §4 |
+| Cross-browser: Chromium, Firefox, WebKit/Safari | **Pass** — identical behaviour on all three |
+| Custom cursor | **Pass** — added in the motion revision; desktop pointer only |
 | Optional 3D element | **Not applicable** — deliberately omitted, §4 |
 | Booking form validation | **Not applicable** — booking is handled by Dash Booking |

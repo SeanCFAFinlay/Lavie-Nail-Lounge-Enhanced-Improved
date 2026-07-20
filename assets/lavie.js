@@ -50,7 +50,7 @@
   }
 
   /* ---------- Scroll reveals (one-time) ---------- */
-  var revealables = $$('.rv, .rv-mask, .rv-line');
+  var revealables = $$('.rv, .rv-mask, .rv-line, .reveal-mask, .gal__fig');
   if (revealables.length) {
     if (reduced.matches || !('IntersectionObserver' in window)) {
       revealables.forEach(function (el) { el.classList.add('in'); });
@@ -285,6 +285,122 @@
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
     sections.forEach(function (s) { spy.observe(s); });
+  }
+
+  /* ==========================================================
+     MOTION LAYER
+     Every block below no-ops under reduced motion or coarse pointers.
+     ========================================================== */
+
+  /* ---------- Scroll progress ---------- */
+  if (!reduced.matches) {
+    var bar = document.createElement('div');
+    bar.className = 'progress';
+    document.body.appendChild(bar);
+    var ticking = false;
+    var drawBar = function () {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(window.scrollY / max, 1) : 0) + ')';
+      ticking = false;
+    };
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(drawBar); }
+    }, { passive: true });
+    drawBar();
+  }
+
+  /* ---------- Count-up on the facts strip ---------- */
+  var facts = $('.facts');
+  if (facts && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (en, obs) {
+      if (!en[0].isIntersecting) return;
+      facts.classList.add('in');
+      obs.disconnect();
+      if (reduced.matches) return;
+      $$('[data-count]', facts).forEach(function (el) {
+        var target = parseInt(el.getAttribute('data-count'), 10);
+        var suffix = el.getAttribute('data-suffix') || '';
+        var t0 = null, dur = 1100;
+        var step = function (t) {
+          if (t0 === null) t0 = t;
+          var k = Math.min((t - t0) / dur, 1);
+          var eased = 1 - Math.pow(1 - k, 3);
+          el.textContent = Math.round(target * eased) + suffix;
+          if (k < 1) requestAnimationFrame(step);
+        };
+        el.textContent = '0' + suffix;
+        requestAnimationFrame(step);
+      });
+    }, { threshold: 0.4 }).observe(facts);
+  }
+
+  /* ---------- Hero parallax on scroll ---------- */
+  var heroFig = $('.hero__figure img');
+  if (heroFig && !reduced.matches && fine.matches) {
+    var pTick = false;
+    var drawPar = function () {
+      var y = window.scrollY;
+      if (y < window.innerHeight * 1.2) {
+        heroFig.style.transform = 'translate3d(0,' + (y * 0.06).toFixed(1) + 'px,0) scale(' + (1 + y * 0.00004).toFixed(4) + ')';
+      }
+      pTick = false;
+    };
+    window.addEventListener('scroll', function () {
+      if (!pTick) { pTick = true; requestAnimationFrame(drawPar); }
+    }, { passive: true });
+  }
+
+  /* ---------- Magnetic buttons — 6px maximum, label never moves away ---------- */
+  if (fine.matches && !reduced.matches) {
+    $$('.btn').forEach(function (btn) {
+      btn.addEventListener('pointermove', function (e) {
+        var r = btn.getBoundingClientRect();
+        var dx = (e.clientX - (r.left + r.width / 2)) / r.width;
+        var dy = (e.clientY - (r.top + r.height / 2)) / r.height;
+        btn.style.transform = 'translate(' + (dx * 6).toFixed(1) + 'px,' + (dy * 5).toFixed(1) + 'px)';
+      });
+      btn.addEventListener('pointerleave', function () { btn.style.transform = ''; });
+    });
+  }
+
+  /* ---------- Contextual cursor ---------- */
+  if (fine.matches && !reduced.matches) {
+    var ring = document.createElement('div'); ring.className = 'cursor';
+    var dot  = document.createElement('div'); dot.className  = 'cursor-dot';
+    document.body.appendChild(ring); document.body.appendChild(dot);
+
+    var rx = 0, ry = 0, tx = 0, ty = 0, running = false;
+    var loop = function () {
+      rx += (tx - rx) * 0.18; ry += (ty - ry) * 0.18;
+      ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
+      dot.style.transform  = 'translate3d(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px,0)';
+      if (Math.abs(tx - rx) > 0.1 || Math.abs(ty - ry) > 0.1) requestAnimationFrame(loop);
+      else running = false;
+    };
+    window.addEventListener('pointermove', function (e) {
+      tx = e.clientX; ty = e.clientY;
+      ring.classList.add('is-on'); dot.classList.add('is-on');
+      if (!running) { running = true; requestAnimationFrame(loop); }
+    }, { passive: true });
+    document.addEventListener('pointerleave', function () {
+      ring.classList.remove('is-on'); dot.classList.remove('is-on');
+    });
+
+    var setState = function (cls, invert) {
+      ring.classList.remove('is-view', 'is-book', 'is-invert');
+      if (cls) ring.classList.add(cls);
+      if (invert) ring.classList.add('is-invert');
+    };
+    $$('.gal__open').forEach(function (el) {
+      el.addEventListener('pointerenter', function () { setState('is-view'); });
+      el.addEventListener('pointerleave', function () { setState(null); });
+    });
+    $$('a[href*="dashbooking"], a[href="#book"]').forEach(function (el) {
+      el.addEventListener('pointerenter', function () {
+        setState('is-book', !!el.closest('.cta'));
+      });
+      el.addEventListener('pointerleave', function () { setState(null); });
+    });
   }
 
   /* ---------- Year ---------- */

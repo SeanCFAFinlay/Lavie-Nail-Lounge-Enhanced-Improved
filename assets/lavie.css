@@ -705,3 +705,135 @@ em.accent { font-style: italic; color: var(--merlot); }
   body { background: #fff; color: #000; }
   .cta { background: #fff; color: #000; }
 }
+
+/* ============================================================
+   24. MOTION LAYER
+   Added after review: the first pass was deliberately restrained.
+   Everything here is transform/opacity/clip-path only, is disabled
+   wholesale under prefers-reduced-motion (section 22), and never
+   gates reading or booking.
+   ============================================================ */
+
+/* --- scroll progress: the lacquer line, running the page --- */
+.progress {
+  position: fixed; inset: 0 0 auto 0; height: 2px; z-index: calc(var(--z-nav) + 1);
+  background: linear-gradient(90deg, var(--champagne), var(--merlot));
+  transform: scaleX(0); transform-origin: left center;
+  will-change: transform; pointer-events: none;
+}
+
+/* --- headings rise out of a mask, line by line --- */
+.js .reveal-mask { clip-path: inset(0 0 110% 0); transform: translateY(14px);
+  transition: clip-path 900ms var(--e-editorial), transform 900ms var(--e-editorial); }
+.js .reveal-mask.in { clip-path: inset(0 0 -10% 0); transform: none; }
+
+/* --- gallery tiles: staggered mask + settle --- */
+.js .gal__fig { opacity: 0; transform: translateY(26px) scale(.985);
+  transition: opacity 700ms var(--e-editorial), transform 700ms var(--e-editorial); }
+.js .gal__fig.in { opacity: 1; transform: none; }
+
+/* --- facts: figures count up, rule draws under each --- */
+.facts div { position: relative; overflow: hidden; }
+.facts div::after {
+  content: ""; position: absolute; left: 0; bottom: 0; height: 1px; width: 100%;
+  background: var(--champagne); transform: scaleX(0); transform-origin: left;
+  transition: transform 900ms var(--e-editorial);
+}
+.js .facts.in div::after { transform: scaleX(1); }
+.facts div:nth-child(2)::after { transition-delay: .1s; }
+.facts div:nth-child(3)::after { transition-delay: .2s; }
+.facts div:nth-child(4)::after { transition-delay: .3s; }
+.facts dd { font-variant-numeric: tabular-nums; }
+
+/* --- service stage: a wipe rather than a plain cross-fade --- */
+.svc__media img {
+  clip-path: inset(0 0 0 0);
+}
+.js .svc__media img:not(.is-shown) { clip-path: inset(0 0 100% 0); }
+.js .svc__media img.is-shown {
+  clip-path: inset(0 0 0 0);
+  transition: opacity 520ms var(--e-editorial), transform var(--d-mask) var(--e-editorial),
+              clip-path 760ms var(--e-editorial);
+}
+
+/* --- service rows: the active row's rule sweeps in --- */
+.svc__item { position: relative; }
+.svc__item::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 1px;
+  background: var(--merlot); transform: scaleX(0); transform-origin: left;
+  transition: transform 420ms var(--e-editorial);
+}
+.svc__item.is-active::after { transform: scaleX(1); }
+
+/* --- magnetic primary buttons (desktop, fine pointer only) --- */
+.btn { will-change: transform; }
+
+/* --- contextual cursor --- */
+.cursor, .cursor-dot {
+  position: fixed; top: 0; left: 0; z-index: 300; pointer-events: none;
+  border-radius: 50%; opacity: 0;
+  transition: opacity 260ms var(--e-ui), width 260ms var(--e-ui),
+              height 260ms var(--e-ui), background 260ms var(--e-ui);
+}
+.cursor {
+  width: 34px; height: 34px; margin: -17px 0 0 -17px;
+  border: 1px solid rgba(23,21,19,.42);
+  display: grid; place-items: center;
+  font-size: .5rem; letter-spacing: .12em; text-transform: uppercase;
+  font-weight: 600; color: transparent;
+}
+.cursor-dot { width: 5px; height: 5px; margin: -2.5px 0 0 -2.5px; background: var(--ink); }
+.cursor.is-on, .cursor-dot.is-on { opacity: 1; }
+.cursor.is-view, .cursor.is-book {
+  width: 76px; height: 76px; margin: -38px 0 0 -38px;
+  background: var(--ink); border-color: var(--ink); color: var(--pearl);
+}
+.cursor.is-view::after { content: "View"; }
+.cursor.is-book::after { content: "Book"; }
+.cursor.is-view ~ .cursor-dot, .cursor.is-book ~ .cursor-dot { opacity: 0; }
+.cursor.is-invert { background: var(--pearl); border-color: var(--pearl); color: var(--ink); }
+
+/* --- lightbox opens rather than appears --- */
+.lb[open] .lb__box { animation: lbIn 420ms var(--e-editorial) both; }
+@keyframes lbIn { from { opacity: 0; transform: scale(.975); } to { opacity: 1; transform: none; } }
+
+/* --- service ticker: an editorial band between sections --- */
+.ticker {
+  border-block: 1px solid var(--rule-fine); background: var(--pearl);
+  overflow: hidden; padding-block: clamp(.7rem,1.2vw,1rem);
+}
+.ticker__row { display: flex; width: max-content; animation: tick 46s linear infinite; }
+.ticker span {
+  display: inline-flex; align-items: center; gap: clamp(1.4rem,3vw,3rem);
+  padding-right: clamp(1.4rem,3vw,3rem);
+  font-family: var(--serif); font-size: clamp(1.05rem,1.9vw,1.6rem); white-space: nowrap;
+}
+.ticker span::after { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--champagne); }
+.ticker:hover .ticker__row { animation-play-state: paused; }
+@keyframes tick { to { transform: translateX(-50%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .progress { display: none; }
+  .js .reveal-mask, .js .reveal-mask.in { clip-path: none; transform: none; }
+  .js .gal__fig { opacity: 1; transform: none; }
+  .js .facts.in div::after, .facts div::after { transform: scaleX(1); }
+  .js .svc__media img:not(.is-shown) { clip-path: none; }
+  .cursor, .cursor-dot { display: none; }
+  .lb[open] .lb__box { animation: none; }
+  .ticker__row { animation: none; }
+}
+@media (hover: none), (pointer: coarse) {
+  .cursor, .cursor-dot { display: none; }
+}
+
+/* gallery tiles settle in sequence rather than all at once */
+.js .gal__fig:nth-child(1) { transition-delay: 0s; }
+.js .gal__fig:nth-child(2) { transition-delay: .06s; }
+.js .gal__fig:nth-child(3) { transition-delay: .12s; }
+.js .gal__fig:nth-child(4) { transition-delay: .18s; }
+.js .gal__fig:nth-child(5) { transition-delay: .24s; }
+.js .gal__fig:nth-child(6) { transition-delay: .30s; }
+.js .gal__fig:nth-child(7) { transition-delay: .36s; }
+.js .gal__fig:nth-child(8) { transition-delay: .42s; }
+.js .gal__fig:nth-child(9) { transition-delay: .48s; }
+@media (prefers-reduced-motion: reduce) { .js .gal__fig { transition-delay: 0s !important; } }
