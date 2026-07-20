@@ -298,7 +298,10 @@ deferred script, no frameworks and no build step.
 
 Ordered by how much each blocks launch.
 
-1. **Client testimonials — blocking.** The section is built and empty. To publish a review,
+1. **Client testimonials — still outstanding.** The section no longer shows an unfinished
+   notice: while the deck is empty it points visitors at the salon's own Google listings for
+   each location, so the proof on the page is real and verifiable. Real quotes still read
+   better and should replace it. To publish a review,
    copy the commented `<figure class="tst__item">` template in `index.html` and fill it in.
 
    **These must be real reviews, and they must come from the salon's own Google Business Profile
@@ -340,6 +343,23 @@ Ordered by how much each blocks launch.
 8. **Team content.** No team section was built, because no verifiable staff information exists.
    See `_archive/README.md`.
 
+9. **Live Instagram feed.** The section links to the real accounts (@lavie_nail_lounge21 and
+   @lavie_nail_lounge25). An auto-updating grid needs an Instagram Graph API access token tied to
+   a Business account, or a paid third-party widget. Supply a token and the grid can be built;
+   without one, a hand-maintained "feed" would go stale and misrepresent itself as live.
+
+10. **First-time client incentive.** Requested as a banner offering something like "10% off your
+    first full set". Not implemented, because no such offer exists — inventing a discount is the
+    same problem as inventing a review, and the salon would be bound to honour it. Confirm a real
+    offer (amount, what it applies to, expiry, per-client limit) and the banner is quick to add:
+    dismissible, persisted, and clicking through to the booking section.
+
+11. **Terms and Privacy pages — serious.** lavienaillounge.ca/terms-and-conditions.html is written
+    for a business called **Victoria's Nails & Spa**, and privacy-policy.html gives a contact
+    address of **524 Broadway Mall, Hicksville, NY** with phone **(516) 597-5999**. Both are
+    uncustomised templates for a different company in another country. Neither was carried over.
+    A BC salon needs its own policy under PIPA; this needs the owner, not a developer.
+
 ---
 
 ## 9. QA checklist
@@ -364,6 +384,10 @@ Ordered by how much each blocks launch.
 | Prices and durations match the salon's booking system | **Pass** |
 | No fabricated pricing, promotions, reviews or staff | **Pass** |
 | Review deck built and tested (empty + populated states) | **Pass** |
+| Booking embedded on-page (all three calendars) | **Pass** |
+| Get Directions per location | **Pass** |
+| Instagram accounts linked | **Pass** — live feed needs a Graph API token, §8.9 |
+| First-time client incentive | **Blocked** — needs a real offer from the salon, §8.10 |
 | Testimonials populated with real reviews | **Needs attention** — see §8.1 |
 | Opening hours confirmed by the salon | **Needs attention** — see §8.2 |
 | Typography legible at functional sizes | **Pass** — reworked after client feedback |

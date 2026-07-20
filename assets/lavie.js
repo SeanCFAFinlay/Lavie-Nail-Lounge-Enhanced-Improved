@@ -246,6 +246,37 @@
     }
   }
 
+  /* ---------- Embedded booking ---------- */
+  var bTabs = $$('.booking__tab');
+  if (bTabs.length) {
+    var stage = $('#bookingStage'), frame = $('#bookingFrame');
+    var which = $('#bookingWhich'), out = $('#bookingOut'), loading = $('#bookingLoading');
+
+    frame.addEventListener('load', function () {
+      if (!frame.getAttribute('src')) return;
+      frame.classList.add('is-ready');
+      if (loading) loading.hidden = true;
+    });
+
+    bTabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var src = tab.getAttribute('data-src');
+        bTabs.forEach(function (t) { t.setAttribute('aria-pressed', String(t === tab)); });
+        stage.hidden = false;
+        if (frame.getAttribute('src') !== src) {
+          frame.classList.remove('is-ready');
+          if (loading) loading.hidden = false;
+          frame.setAttribute('src', src);
+        }
+        which.textContent = tab.getAttribute('data-label');
+        out.setAttribute('href', src);
+        // Keep the calendar in view without yanking the page around.
+        var top = stage.getBoundingClientRect().top + window.scrollY - 90;
+        window.scrollTo({ top: top, behavior: reduced.matches ? 'auto' : 'smooth' });
+      });
+    });
+  }
+
   /* ---------- Mobile sticky CTA ---------- */
   var sticky = $('.sticky');
   if (sticky) {
