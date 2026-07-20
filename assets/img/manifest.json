@@ -1,0 +1,101 @@
+{
+  "1": {
+    "crop": null,
+    "quality": 80,
+    "sha": "64453039c68b1b45",
+    "source": "1.jpg",
+    "widths": [
+      800,
+      1600
+    ]
+  },
+  "2": {
+    "crop": [
+      0.0,
+      0.26,
+      1.0,
+      1.0
+    ],
+    "quality": 80,
+    "sha": "8bbda127834a7c3e",
+    "source": "2.jpg",
+    "widths": [
+      800,
+      1600
+    ]
+  },
+  "26": {
+    "crop": null,
+    "quality": 80,
+    "sha": "7ca40299fd3b1b06",
+    "source": "26.jpg",
+    "widths": [
+      800
+    ]
+  },
+  "3": {
+    "crop": null,
+    "quality": 80,
+    "sha": "0f3721bb2f23b711",
+    "source": "3.jpg",
+    "widths": [
+      800,
+      1600
+    ]
+  },
+  "35": {
+    "crop": null,
+    "quality": 80,
+    "sha": "56b1dc917d9c3b54",
+    "source": "35.jpg",
+    "widths": [
+      800,
+      1600
+    ]
+  },
+  "5": {
+    "crop": null,
+    "quality": 80,
+    "sha": "108f39d5ec6e8fd4",
+    "source": "5.jpg",
+    "widths": [
+      800,
+      1600
+    ]
+  },
+  "6": {
+    "crop": null,
+    "quality": 80,
+    "sha": "cc3916f09cdebe70",
+    "source": "6.jpg",
+    "widths": [
+      800,
+      1600
+    ]
+  },
+  "9": {
+    "crop": null,
+    "quality": 80,
+    "sha": "f9d7ac8498c19a14",
+    "source": "9.jpg",
+    "widths": [
+      800,
+      1600
+    ]
+  },
+  "charms": {
+    "crop": [
+      0.0,
+      0.0,
+      0.875,
+      1.0
+    ],
+    "quality": 80,
+    "sha": "92f958d6ce2a0363",
+    "source": "1717607568416-Lavielg.webp",
+    "widths": [
+      800,
+      1600
+    ]
+  }
+}
