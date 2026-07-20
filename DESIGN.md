@@ -48,21 +48,33 @@ All tokens live in `assets/lavie.css` under `:root`.
 | `--champagne-lo` | `#8A6F3C` | AA-contrast variant for small text on pearl |
 | `--merlot` / `--merlot-deep` | `#532737` / `#3B1A27` | Accent italics; final CTA field |
 | `--ink` | `#171513` | Primary text, primary button, footer |
-| `--text-muted` | `#5C5551` | Secondary copy (7.4:1 on ivory) |
+| `--text-muted` | `#514A46` | Secondary copy (8.4:1 on ivory) |
 
 Gold appears only as hairlines, small labels and the button sheen. There are no large flat
 gold areas and no metallic gradients. The design holds without any gradient or effect.
 
 ### Type
-Two families only. `--serif` Bodoni Moda for emotional headlines and service names;
-`--sans` Manrope for navigation, prices, durations, body and every functional label.
-Scale is clamp-based: `--fs-hero` `clamp(2.9rem, 9.2vw, 9.2rem)` down to `--fs-label` `.688rem`.
+Two families only. `--serif` **Playfair Display** for display headlines only; `--sans` Manrope
+for navigation, service names, prices, durations, questions, body and every functional label.
+Scale is clamp-based: `--fs-hero` `clamp(2.6rem, 7.4vw, 6.6rem)` down to `--fs-label` `.75rem`.
+
+**Revision (client feedback).** The original pairing used Bodoni Moda, whose hairline strokes
+broke down at functional sizes and was reported as hard to read. Two changes followed: the serif
+was replaced with Playfair Display, which holds far sturdier strokes at the same sizes; and the
+serif was restricted to display headlines, with service names, FAQ questions and prices moved to
+the sans, as the brief's own typography rules specify. Body, label and small-text sizes were all
+increased, label tracking was reduced from `.2em` to `.13em`, and `--text-muted` was darkened.
 Both load with `display=swap` behind preconnect, and every image carries explicit dimensions,
 so measured CLS is 0.
 
 ### Space & layout
-12-column desktop grid, `--maxw` 1460px, `--gutter` `clamp(1.15rem, 4.2vw, 4.5rem)`.
-Section rhythm `--section-y` `clamp(4.5rem, 10vw, 10rem)`.
+12-column desktop grid, `--maxw` 1320px, `--gutter` `clamp(1.15rem, 3.2vw, 3rem)`.
+Section rhythm `--section-y` `clamp(3.25rem, 5.4vw, 5.5rem)`.
+
+**Revision (client feedback).** The layout was reported as too loose. Section rhythm was cut by
+roughly 45%, max width narrowed, gutters tightened, the hero shortened to 86svh with a shorter
+figure, and the padding on service rows, FAQ rows, the facts strip and every section head reduced.
+The hero scroll cue was removed — at the tighter height it collided with the primary button.
 
 ### Radius
 `--r-arch` (the motif), `--r-soft` 2px, `--r-pill` 100px.
@@ -136,9 +148,12 @@ questions at the decision point is what prevents abandonment. *Execution:* acces
 with `aria-expanded`, full-width triggers and a grid-rows transition. *Fallback:* answers are
 expanded by default and only collapse once JavaScript runs.
 
-**Final CTA.** *Decision:* a full-bleed merlot field with one idea and two studio choices.
+**Final CTA.** *Decision:* a full-bleed merlot field with one idea and three location choices.
 *Reason:* after services, work and questions, the visitor needs one confident decision point.
-*Execution:* oversized serif, soft directional glow, no competing actions, no false urgency.
+*Execution:* oversized serif, soft directional glow, no false urgency. Because there are three
+salons with separate calendars, every generic "Book an Appointment" control routes to this section
+rather than hard-coding one salon; the visitor picks a location here and goes straight to its
+Dash Booking calendar. Each location card and the footer also carry direct links.
 
 **Mobile sticky CTA.** *Decision:* appears once the hero has left the viewport and withdraws when
 the final CTA is on screen. *Reason:* a visitor who decides mid-page should not have to scroll
@@ -220,17 +235,19 @@ Ordered by how much each blocks launch.
    3–5 real reviews with text, first name or initials, service booked, source, rating and date.
    Reviews mentioning how long a set lasted, cleanliness, or a named technician are the most
    persuasive at that point in the page.
-2. **Opening hours — needs confirmation.** Shown as Mon–Fri 10:00–19:00, Sat 10:00–18:00,
-   Sun 11:00–17:00. These come from third-party directories and are consistent with the booking
-   system's "open today 10am–7pm", but they are not published on lavienaillounge.ca, and Newton's
-   hours have not been separately confirmed.
+2. **Opening hours — not published.** lavienaillounge.ca has an Hours section but it was never
+   populated, and no hours are published for any of the three locations. Rather than show
+   unverified times as fact, the location cards now point to each salon's booking page, which
+   shows live availability. Supply confirmed hours per location and they will be added.
 3. **The repair line items — needs confirmation.** The booking system lists *Fix (under Policy
    <7 Days)* at $7 and *Fix (>7 Days)* at $0, which reads as the reverse of the usual arrangement.
    Reproduced exactly as listed; the FAQ deliberately avoids stating which is which.
-4. **The third location — needs a decision.** lavienaillounge.ca lists 3D Nails Spa (8850 Walnut
-   Grove Dr, Langley Twp, BC V1M 3W4 · 604-888-1619). It is currently omitted. Decide whether it
-   is a LaVie location, a sister salon, or unrelated — and supply its booking link if it stays.
-   Note the archived `locations.html` claimed a *different* Langley address entirely.
+4. **Third location postal code — minor conflict.** 3D Nails Spa (8850 Walnut Grove Dr, Langley
+   Twp · 604-888-1619) is now included with its own booking calendar
+   (`dashbooking.com/salon/3d-nails-spa`). The postal code is shown as **V1M 3W4**, as supplied and
+   as listed on lavienaillounge.ca; the salon's own Dash Booking page says **V1M 2C9**. Worth
+   confirming which is right. Note Dash Booking also hosts a "LaVie Nail Lounge Langley" page at
+   the same street address — confirm whether that is a rebrand and which name should be shown.
 5. **Logo files.** No vector logo was supplied. `assets/logo-wordmark.svg`, `logo-badge.svg` and
    `favicon.svg` were rebuilt from the current site's header image. Replace with the originals if
    they exist — in particular, the badge's typography is an approximation.
@@ -266,8 +283,11 @@ Ordered by how much each blocks launch.
 | No fabricated pricing, promotions, reviews or staff | **Pass** |
 | Testimonials populated | **Needs attention** — see §8.1 |
 | Opening hours confirmed by the salon | **Needs attention** — see §8.2 |
+| Typography legible at functional sizes | **Pass** — reworked after client feedback |
+| Layout density | **Pass** — tightened after client feedback |
 | Repair pricing clarified | **Needs attention** — see §8.3 |
-| Third location resolved | **Needs attention** — see §8.4 |
+| All three locations bookable from the site | **Pass** |
+| Third location postal code confirmed | **Needs attention** — see §8.4 |
 | Original vector logo in place | **Needs attention** — see §8.5 |
 | Cross-browser check on Safari/Firefox | **Needs attention** — verified in Chrome only |
 | Custom cursor | **Not applicable** — deliberately omitted, §4 |
