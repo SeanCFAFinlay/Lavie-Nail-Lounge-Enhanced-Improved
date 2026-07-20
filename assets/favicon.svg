@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="LaVie Nail Lounge">
+  <!-- Simplified to the nail-arch motif inside the gold frame: the full wordmark
+       is unreadable at 16px, the silhouette still reads. -->
+  <rect width="64" height="64" rx="12" fill="#3B1A27"/>
+  <rect x="14" y="12" width="36" height="40" fill="none" stroke="#C6A66B" stroke-width="2"/>
+  <path d="M32 18c7 0 11 5 11 12v14c0 1.1-.9 2-2 2H23c-1.1 0-2-.9-2-2V30c0-7 4-12 11-12z" fill="#E8CBC8"/>
+  <path d="M26 27c2.5-3 9.5-3 12 0" stroke="#FFFDFC" stroke-width="1.8" stroke-linecap="round" fill="none" opacity=".85"/>
+</svg>

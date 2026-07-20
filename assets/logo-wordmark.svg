@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 72" role="img" aria-label="LaVie Nail Lounge">
+  <!-- Blush swash sits low and behind the lockup so it reads as a brushstroke,
+       not as a mark crossing the letterforms. -->
+  <g opacity=".5">
+    <path d="M8 52c40-9 74-6 118-9 46-3 92-7 140-5 44 2 96 1 146-4-2 7-10 11-30 13-38 4-84 6-130 6-52 0-104 4-152 7-38 2-70 3-92-1z" fill="#E8CBC8"/>
+    <path d="M14 60c46-6 88-4 136-6 52-2 104-5 152-3" stroke="#E8CBC8" stroke-width="4" stroke-linecap="round" fill="none"/>
+  </g>
+  <text x="4" y="44" font-family="'Bodoni Moda',Didot,'Times New Roman',serif" font-size="42" fill="#171513" letter-spacing="-1">LaVie</text>
+  <text x="140" y="43" font-family="Manrope,Helvetica,Arial,sans-serif" font-size="33" fill="#171513" letter-spacing="2.5" font-weight="400">NAIL LOUNGE</text>
+</svg>

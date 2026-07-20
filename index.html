@@ -1,209 +1,689 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>La Vie Nail Lounge – Luxury Nails, Flawless Finish</title>
-<link rel="stylesheet" href="style.css" />
-    <meta name="description" content="Experience luxury manicures and pedicures at La Vie Nail Lounge. Discover Gel-X, nail extensions, spa pedicures and more at our Surrey and Langley locations." />
-  </head>
-  <body>
-    <!-- Header / Navigation -->
-    <header>
-      <div class="logo">La Vie Nail Lounge</div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="locations.html">Locations</a></li>
-          <li><a href="promotions.html">Promotions</a></li>
-          <li><a href="payment.html">Payment</a></li>
-          <li><a href="products.html">Products</a></li>
-          <!-- Added Team page link for staff bios and slider -->
-          <li><a href="team.html">Team</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <a href="#" class="btn btn-primary" data-book="general">Book Now</a>
-    </header>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>LaVie Nail Lounge — Nail Artistry in Surrey, BC</title>
+<meta name="description" content="LaVie Nail Lounge offers Gel-X, nail extensions, spa pedicures, shellac, lash extensions, head spa and waxing at two Surrey studios — Fleetwood and Newton. Every price and duration published. Book online." />
+<link rel="canonical" href="https://lavienaillounge.ca/" />
 
-    <!-- Hero Section with interactive slider -->
-    <section class="hero">
-      <div class="hero-slider">
-        <div class="hero-slide active">
-          <!-- Updated to use an alternate nail art image -->
-          <img src="35.jpg" alt="Elegant white swirl nail art" />
-          <div class="hero-caption">
-            <h1>Luxury nails, flawless finish</h1>
-            <p>
-              Indulge in an elevated beauty experience. From Gel‑X and stunning
-              extensions to rejuvenating pedicures and intricate nail art, our
-              talented technicians craft perfection in every detail.
-            </p>
-            <a href="#" class="btn btn-primary" data-book="general">Book Your Appointment</a>
-          </div>
-        </div>
-        <div class="hero-slide">
-        <!-- Updated second hero image to feature pink floral nails -->
-        <img src="2.jpg" alt="Pink floral nail art" />
-          <div class="hero-caption">
-            <h1>Elevate your style</h1>
-            <p>
-              Discover our signature services—from flawless acrylics to bespoke
-              nail art—delivered with precision and care by our artists.
-            </p>
-            <a href="#" class="btn btn-primary" data-book="general">View Services</a>
-          </div>
-        </div>
-        <div class="hero-slide">
-          <img src="9.jpg" alt="Colour swirl nails" />
-          <div class="hero-caption">
-            <h1>Relax &amp; rejuvenate</h1>
-            <p>
-              Sink into serenity with our luxurious spa pedicures and soothing
-              treatments. Your escape awaits.
-            </p>
-            <a href="#" class="btn btn-primary" data-book="general">Book a Pedicure</a>
-          </div>
-        </div>
-      </div>
-      <div class="hero-controls">
-        <button id="heroPrev">Prev</button>
-        <button id="heroNext">Next</button>
-      </div>
-    </section>
+<meta property="og:type" content="website" />
+<meta property="og:title" content="LaVie Nail Lounge — Nail Artistry in Surrey, BC" />
+<meta property="og:description" content="Gel-X, extensions, spa pedicures, lash artistry and head spa at our Fleetwood and Newton studios. Published pricing. Book online." />
+<meta property="og:url" content="https://lavienaillounge.ca/" />
+<meta property="og:image" content="https://lavienaillounge.ca/assets/img/1-1600.jpg" />
+<meta property="og:locale" content="en_CA" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#F6F0E8" />
 
-    <!-- Highlighted Services -->
-    <section class="services">
-      <h2>Our Signature Services</h2>
-      <div class="service-cards">
-        <!-- Gel-X Extensions -->
-        <div class="service-card">
-          <img src="1.jpg" alt="White swirl nail art" class="service-img" />
-          <h3>Gel‑X Extensions</h3>
-          <div class="meta">60–90 min · from $80</div>
-          <p>
-            Lightweight, natural‑looking extensions applied with gel and cured
-            under UV/LED light. Flexible, long‑lasting and damage‑free.
-          </p>
-          <a href="#" class="btn btn-secondary" data-book="Gel‑X">Book
-            Now</a>
-        </div>
-        <!-- Acrylic & Nail Extensions -->
-        <div class="service-card">
-          <img src="3.jpg" alt="Blue butterfly nail art" class="service-img" />
-          <h3>Acrylic & Nail Extensions</h3>
-          <div class="meta">60–120 min · from $70</div>
-          <p>
-            Enhance your natural nails with length and strength. Our
-            technicians sculpt the perfect shape for a polished finish.
-          </p>
-          <a href="#" class="btn btn-secondary" data-book="Extensions">Book Now</a>
-        </div>
-        <!-- Luxury Pedicures -->
-        <div class="service-card">
-          <img src="5.jpg" alt="Gold and pearl nail art" class="service-img" />
-          <h3>Luxury Pedicures</h3>
-          <div class="meta">45–75 min · from $50</div>
-          <p>
-            Relax with a soothing soak, exfoliation, mask and massage. Choose
-            from classic to deluxe packages for silky, refreshed feet.
-          </p>
-          <a href="#" class="btn btn-secondary" data-book="Pedicure">Book Now</a>
-        </div>
-        <!-- Nail Art & Design -->
-        <div class="service-card">
-          <img src="6.jpg" alt="Red floral nail art" class="service-img" />
-          <h3>Nail Art & Design</h3>
-          <div class="meta">30–60 min · from $20</div>
-          <p>
-            Express your style with custom designs, chrome, charms and
-            seasonal themes. Our artists transform nails into miniature
-            masterpieces.
-          </p>
-          <a href="#" class="btn btn-secondary" data-book="Nail Art">Book Now</a>
-        </div>
-      </div>
-    </section>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="image" href="assets/img/1-1600.jpg"
+      imagesrcset="assets/img/1-800.jpg 800w, assets/img/1-1600.jpg 1600w"
+      imagesizes="(max-width: 1080px) 1px, 42vw" fetchpriority="high" />
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add('js');</script>
+<link rel="stylesheet" href="assets/lavie.css" />
 
-    <!-- Promotions Summary -->
-    <section class="promotions">
-      <h2>Monthly Promotions</h2>
-      <div class="promo-cards">
-        <div class="promo-card">
-          <img src="1.jpg" alt="Gel‑X promotion" />
-          <div class="promo-content">
-            <h4>Gel‑X New Set Special</h4>
-            <p>Enjoy 15% off your first Gel‑X new set this month only.</p>
-            <a href="promotions.html" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-        <div class="promo-card">
-          <img src="5.jpg" alt="Pedicure promotion" />
-          <div class="promo-content">
-            <h4>Deluxe Pedicure Upgrade</h4>
-            <p>
-              Receive a complimentary paraffin treatment when booking a deluxe
-              pedicure.
-            </p>
-            <a href="promotions.html" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-        <div class="promo-card">
-          <img src="9.jpg" alt="Lash & brow combo" />
-          <div class="promo-content">
-            <h4>Lash & Brow Combo</h4>
-            <p>Bundle your lash extensions with brow shaping and save 20%.</p>
-            <a href="promotions.html" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "LaVie Nail Lounge",
+  "url": "https://lavienaillounge.ca/",
+  "logo": "https://lavienaillounge.ca/assets/logo-badge.svg",
+  "department": [
+    {
+      "@type": "NailSalon",
+      "name": "LaVie Nail Lounge Fleetwood",
+      "image": "https://lavienaillounge.ca/assets/img/1-1600.jpg",
+      "address": { "@type": "PostalAddress", "streetAddress": "15988 Fraser Hwy Unit #202", "addressLocality": "Surrey", "addressRegion": "BC", "postalCode": "V4N 0X8", "addressCountry": "CA" },
+      "telephone": "+1-778-565-3515",
+      "priceRange": "$$",
+      "hasMap": "https://www.google.com/maps?q=15988+Fraser+Hwy+Unit+%23202,+Surrey,+BC+V4N+0X8",
+      "potentialAction": { "@type": "ReserveAction", "target": "https://www.dashbooking.com/salon/lavie-nail-lounge/booking" }
+    },
+    {
+      "@type": "NailSalon",
+      "name": "LaVie Nail Lounge Newton",
+      "image": "https://lavienaillounge.ca/assets/img/2-1600.jpg",
+      "address": { "@type": "PostalAddress", "streetAddress": "7218 King George Blvd #118", "addressLocality": "Surrey", "addressRegion": "BC", "postalCode": "V3W 5A5", "addressCountry": "CA" },
+      "telephone": "+1-778-592-1049",
+      "priceRange": "$$",
+      "hasMap": "https://www.google.com/maps?q=7218+King+George+Blvd+%23118,+Surrey,+BC+V3W+5A5",
+      "potentialAction": { "@type": "ReserveAction", "target": "https://www.dashbooking.com/salon/lavie-nail-lounge-newton/booking" }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
 
-    <!-- Footer -->
-    <footer>
-      <p>© <span id="year"></span> La Vie Nail Lounge. All rights reserved.</p>
-    </footer>
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <a class="nav__brand" href="index.html" aria-label="LaVie Nail Lounge — home">
+    <img src="assets/logo-wordmark.svg" alt="LaVie Nail Lounge" width="420" height="72" />
+  </a>
+  <nav aria-label="Primary">
+    <ul class="nav__links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#standard">The Studio</a></li>
+      <li><a href="#questions">Questions</a></li>
+      <li><a href="#studios">Studios</a></li>
+    </ul>
+  </nav>
+  <div class="nav__end">
+    <a class="btn btn--sm" href="https://www.dashbooking.com/salon/lavie-nail-lounge/booking" target="_blank" rel="noopener">
+      <span class="btn__t">Book an Appointment</span>
+    </a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">
+      <span aria-hidden="true"></span>Menu
+    </button>
+  </div>
+</header>
 
-    <!-- Scheduler Modal -->
-    <div id="scheduleModal" class="modal">
-      <div class="modal-content">
-        <button class="modal-close">Close</button>
-        <iframe id="scheduleIframe" title="Booking Schedule"></iframe>
+<div class="menu" id="menu">
+  <nav aria-label="Mobile">
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Selected Work</a></li>
+      <li><a href="#standard">The Studio</a></li>
+      <li><a href="#questions">Questions</a></li>
+      <li><a href="#studios">Studios</a></li>
+      <li><a href="services.html">Full Price Menu</a></li>
+    </ul>
+  </nav>
+  <div class="menu__foot">
+    <a class="btn" href="https://www.dashbooking.com/salon/lavie-nail-lounge/booking" target="_blank" rel="noopener"><span class="btn__t">Book an Appointment</span></a>
+    <a class="btn btn--ghost" href="tel:+17785653515"><span class="btn__t">Call Fleetwood</span></a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <p class="label hero__eyebrow rv">Nail Lounge — Surrey, British&nbsp;Columbia</p>
+      <h1>
+        <span class="ln rv" data-d="1"><span>A finish</span></span>
+        <span class="ln rv" data-d="2"><span>worth the</span></span>
+        <span class="ln rv" data-d="3"><span class="it">closer look.</span></span>
+      </h1>
+      <p class="lead hero__lead rv" data-d="4">
+        Gel‑X, sculpted extensions, spa pedicures, lash artistry and head spa —
+        under one roof at our Fleetwood and Newton studios. Every price and
+        duration published before you book.
+      </p>
+      <div class="hero__cta rv" data-d="5">
+        <a class="btn" href="https://www.dashbooking.com/salon/lavie-nail-lounge/booking" target="_blank" rel="noopener">
+          <span class="btn__t">Book an Appointment</span>
+          <svg class="btn__i" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.4"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="#services"><span class="btn__t">Explore Services</span></a>
       </div>
     </div>
 
-    <script src="interactions.js"></script>
-    <script>
-      // Update year automatically
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-    <!-- Hero slider functionality -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const heroSlides = document.querySelectorAll('.hero-slide');
-        let heroIndex = 0;
-        function showHeroSlide(i) {
-          heroSlides.forEach(function (slide, idx) {
-            slide.classList.toggle('active', idx === i);
-          });
-        }
-        document.getElementById('heroPrev').addEventListener('click', function () {
-          heroIndex = (heroIndex - 1 + heroSlides.length) % heroSlides.length;
-          showHeroSlide(heroIndex);
-        });
-        document.getElementById('heroNext').addEventListener('click', function () {
-          heroIndex = (heroIndex + 1) % heroSlides.length;
-          showHeroSlide(heroIndex);
-        });
-        // Optional: auto‑advance slides every 6 seconds
-        setInterval(function () {
-          heroIndex = (heroIndex + 1) % heroSlides.length;
-          showHeroSlide(heroIndex);
-        }, 6000);
-      });
-    </script>
-  </body>
+    <figure class="hero__figure rv-mask" data-d="2" style="margin:0">
+      <img src="assets/img/1-1600.jpg" srcset="assets/img/1-800.jpg 800w, assets/img/1-1600.jpg 1600w" sizes="(max-width: 1080px) 1px, 42vw"
+           alt="Long coffin-shaped nails in soft blush with white linework and clustered crystal accents, resting on white fur." width="1600" height="1894" fetchpriority="high" />
+      <span class="hero__thread" aria-hidden="true"></span>
+    </figure>
+  </div>
+  <a class="hero__scroll" href="#intro"><i aria-hidden="true"></i>Scroll</a>
+</section>
+
+<!-- ============ INTRO ============ -->
+<section class="section intro" id="intro">
+  <div class="shell">
+    <div class="grid12 intro__grid">
+      <p class="label intro__label rv">01 — The Studio</p>
+      <div class="intro__stmt">
+        <p class="display rv" data-d="1">
+          A manicure is a small object, made <em class="accent">very precisely,</em>
+          on a surface that never sits still.
+        </p>
+      </div>
+      <div class="intro__body">
+        <p class="rv" data-d="2">
+          LaVie Nail Lounge is a full‑service nail and beauty studio in Surrey.
+          Alongside nails we offer lash extensions, head spa treatments and waxing,
+          so a single appointment can cover more than one thing.
+        </p>
+        <p class="rv" data-d="3">
+          Our full menu — more than fifty services — is published with a fixed price
+          and an expected duration on each one. You can see exactly what you are
+          booking, and how long to set aside, before you confirm.
+        </p>
+        <p class="rv" data-d="4"><a class="tlink" href="services.html">See the full price menu
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.4"/></svg></a></p>
+      </div>
+      <figure class="intro__fig rv-mask" data-d="3" style="margin:0">
+        <img src="assets/img/5-1600.jpg" srcset="assets/img/5-800.jpg 800w, assets/img/5-1600.jpg 1600w" sizes="(max-width: 1080px) 92vw, 26vw" alt="Square-tipped nude nails outlined in fine gold, with white floral brushwork and pearl detailing." width="1600" height="1711" loading="lazy" />
+        <figcaption>Gold linework &amp; pearl detail</figcaption>
+      </figure>
+    </div>
+
+    <dl class="facts rv" data-d="2">
+      <div><dt>Studios</dt><dd>Two, in Surrey</dd></div>
+      <div><dt>Service groups</dt><dd>Nine</dd></div>
+      <div><dt>Published services</dt><dd>50+</dd></div>
+      <div><dt>Booking</dt><dd>Online, daily</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section svc" id="services">
+  <div class="shell">
+    <div class="svc__head">
+      <div>
+        <p class="label rv">02 — Services</p>
+        <h2 class="h2 rv" data-d="1" style="margin-top:1rem">Select a service.</h2>
+      </div>
+      <p class="lead measure rv" data-d="2" style="margin:0">
+        Six signature groups shown here with real pricing. The complete menu,
+        including waxing, add‑ons and children's services, is on the price list.
+      </p>
+    </div>
+
+    <div class="svc__layout">
+      <ul class="svc__list">
+
+        <li class="svc__item" data-svc="gelx" data-name="Gel‑X" data-meta="$75 · 75 min">
+          <h3><button class="svc__btn" type="button" aria-expanded="false">
+            <span class="svc__num">01</span><span class="svc__name">Gel‑X</span><span class="svc__from">$75 · 75 min</span>
+          </button></h3>
+          <div class="svc__panel">
+            <p>Soft gel tips bonded to the natural nail with gel and cured under lamp.
+               A lightweight extension with a flexible finish.</p>
+            <ul class="svc__rows"><li><b>Gel‑X</b><span>75 min · $75</span></li></ul>
+            <a class="btn btn--sm" href="https://www.dashbooking.com/salon/lavie-nail-lounge/booking" target="_blank" rel="noopener"><span class="btn__t">Book an Appointment</span></a>
+          </div>
+        </li>
+
+        <li class="svc__item" data-svc="ext" data-name="Nail Extensions" data-meta="From $60 · 60 min">
+          <h3><button class="svc__btn" type="button" aria-expanded="false">
+            <span class="svc__num">02</span><span class="svc__name">Nail Extensions</span><span class="svc__from">From $60</span>
+          </button></h3>
+          <div class="svc__panel">
+            <p>Sculpted length in powder colour, ombré or UV gel — as a full set or a fill.
+               French finish and repairs are available as separate line items.</p>
+            <ul class="svc__rows">
+              <li><b>Full Set Powder Colour</b><span>60 min · $65</span></li>
+              <li><b>Fill Powder Colour</b><span>60 min · $60</span></li>
+              <li><b>Full Set Ombré</b><span>60 min · $75</span></li>
+              <li><b>Fill Ombré</b><span>60 min · $70</span></li>
+              <li><b>Full Set UV Gel</b><span>60 min · $75</span></li>
+              <li><b>Fill UV Gel</b><span>60 min · $65</span></li>
+              <li><b>French</b><span>45 min · $15</span></li>
+            </ul>
+            <a class="btn btn--sm" href="https://www.dashbooking.com/salon/lavie-nail-lounge/booking" target="_blank" rel="noopener"><span class="btn__t">Book an Appointment</span></a>
+          </div>
+        </li>
+
+        <li class="svc__item" data-svc="pedi" data-name="Pedicure Packages" data-meta="From $25 · 30 min">
+          <h3><button class="svc__btn" type="button" aria-expanded="false">
+            <span class="svc__num">03</span><span class="svc__name">Pedicure Packages</span><span class="svc__from">From $25</span>
+          </button></h3>
+          <div class="svc__panel">
+            <p>Manicure and pedicure services from a standard spa pedicure through to
+               collagen and deluxe treatments, bookable individually or as a set.</p>
+            <ul class="svc__rows">
+              <li><b>Manicure</b><span>30 min · $25</span></li>
+              <li><b>Spa Pedicure</b><span>45 min · $37</span></li>
+              <li><b>Deluxe Manicure</b><span>45 min · $40</span></li>
+              <li><b>Deluxe Pedicure</b><span>60 min · $58</span></li>
+              <li><b>Manicure / Pedicure Set</b><span>60 min · $60</span></li>
+              <li><b>Collagen Pedicure</b><span>75 min · $70</span></li>
+              <li><b>Deluxe Manicure / Pedicure Set</b><span>90 min · $92</span></li>
+              <li><b>Cut Toe</b><span>15 min · $20</span></li>
+            </ul>
+            <a class="btn btn--sm" href="https://www.dashbooking.com/salon/lavie-nail-lounge/booking" target="_blank" rel="noopener"><span class="btn__t">Book an Appointment</span></a>
+          </div>
+        </li>
+
+        <li class="svc__item" data-svc="shellac" data-name="Shellac | Gel Colour" data-meta="From $25 · 30 min">
+          <h3><button class="svc__btn" type="button" aria-expanded="false">
+            <span class="svc__num">04</span><span class="svc__name">Shellac | Gel Colour</span><span class="svc__from">From $25</span>
+          </button></h3>
+          <div class="svc__panel">
+            <p>Gel colour cured under lamp for a hard, high‑shine finish with no dry time.
+               Available on its own or combined with a manicure or pedicure.</p>
+            <ul class="svc__rows">
+              <li><b>Shellac / Gel Colour — New</b><span>30 min · $25</span></li>
+              <li><b>Gel French</b><span>30 min · $30</span></li>
+              <li><b>With Manicure</b><span>30 min · $40</span></li>
+              <li><b>With Pedicure</b><span>45 min · $52</span></li>
+              <li><b>Manicure / Pedicure Set</b><span>90 min · $90</span></li>
+            </ul>
+            <a class="btn btn--sm" href="https://www.dashbooking.com/salon/lavie-nail-lounge/booking" target="_blank" rel="noopener"><span class="btn__t">Book an Appointment</span></a>
+          </div>
+        </li>
+
+        <li class="svc__item" data-svc="lash" data-name="Lash Extensions" data-meta="From $85 · 60 min">
+          <h3><button class="svc__btn" type="button" aria-expanded="false">
+            <span class="svc__num">05</span><span class="svc__name">Lash Extensions</span><span class="svc__from">From $85</span>
+          </button></h3>
+          <div class="svc__panel">
+            <p>Classic, hybrid, volume and mega sets, with fills priced separately.
+               Removal is available as its own appointment.</p>
+            <ul class="svc__rows">
+              <li><b>Classic Set</b><span>60 min · $100</span></li>
+              <li><b>Classic Fill</b><span>60 min · $85</span></li>
+              <li><b>Hybrid Set</b><span>60 min · $110</span></li>
+              <li><b>Hybrid Fill</b><span>60 min · $90</span></li>
+              <li><b>Volume Set</b><span>75 min · $120</span></li>
+              <li><b>Volume Fill</b><span>60 min · $100</span></li>
+              <li><b>Mega Set</b><span>120 min · $160</span></li>
+              <li><b>Mega Fill</b><span>90 min · $130</span></li>
+              <li><b>Removal</b><span>15 min · $20</span></li>
+            </ul>
+            <a class="btn btn--sm" href="https://www.dashbooking.com/salon/lavie-nail-lounge/booking" target="_blank" rel="noopener"><span class="btn__t">Book an Appointment</span></a>
+          </div>
+        </li>
+
+        <li class="svc__item" data-svc="head" data-name="Head Spa" data-meta="From $65 · 45 min">
+          <h3><button class="svc__btn" type="button" aria-expanded="false">
+            <span class="svc__num">06</span><span class="svc__name">Head Spa</span><span class="svc__from">From $65</span>
+          </button></h3>
+          <div class="svc__panel">
+            <p>Scalp and hair treatments, from a regular wash through to a
+               ninety‑minute head and body renewal.</p>
+            <ul class="svc__rows">
+              <li><b>Regular Hair Wash</b><span>45 min · $65</span></li>
+              <li><b>Elite Wellness Head Experience</b><span>75 min · $95</span></li>
+              <li><b>Luxurious Serenity Head &amp; Body Renewal</b><span>90 min · $120</span></li>
+            </ul>
+            <a class="btn btn--sm" href="https://www.dashbooking.com/salon/lavie-nail-lounge/booking" target="_blank" rel="noopener"><span class="btn__t">Book an Appointment</span></a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="svc__stage" aria-hidden="true">
+        <div class="svc__media">
+          <img data-svc="gelx"    class="is-shown" src="assets/img/35-1600.jpg" srcset="assets/img/35-800.jpg 800w, assets/img/35-1600.jpg 1600w" sizes="(max-width: 1080px) 1px, 46vw" alt="" loading="lazy" />
+          <img data-svc="ext"     src="assets/img/3-1600.jpg" srcset="assets/img/3-800.jpg 800w, assets/img/3-1600.jpg 1600w" sizes="(max-width: 1080px) 1px, 46vw" alt="" loading="lazy" />
+          <img data-svc="pedi"    src="assets/img/9-1600.jpg" srcset="assets/img/9-800.jpg 800w, assets/img/9-1600.jpg 1600w" sizes="(max-width: 1080px) 1px, 46vw" alt="" loading="lazy" />
+          <img data-svc="shellac" src="assets/img/2-1600.jpg" srcset="assets/img/2-800.jpg 800w, assets/img/2-1600.jpg 1600w" sizes="(max-width: 1080px) 1px, 46vw" alt="" loading="lazy" />
+          <img data-svc="lash"    src="assets/img/26-800.jpg" srcset="assets/img/26-800.jpg 800w" sizes="(max-width: 1080px) 1px, 46vw" alt="" loading="lazy" />
+          <img data-svc="head"    src="assets/img/spa_essentials-800.jpg" srcset="assets/img/spa_essentials-800.jpg 800w" sizes="(max-width: 1080px) 1px, 46vw" alt="" loading="lazy" />
+        </div>
+        <p class="svc__caption"><span id="svcCapName">Gel‑X</span><span id="svcCapMeta">$75 · 75 min</span></p>
+      </div>
+    </div>
+
+    <p style="margin-top:clamp(2rem,4vw,3rem)" class="rv">
+      <a class="tlink" href="services.html">View all 50+ services and prices
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.4"/></svg></a>
+    </p>
+  </div>
+</section>
+
+<!-- ============ STANDARD ============ -->
+<section class="section std" id="standard">
+  <div class="shell">
+    <p class="label rv">03 — What to expect</p>
+    <h2 class="h2 rv" data-d="1" style="margin-top:1rem;max-width:18ch">Booked with the details settled first.</h2>
+    <div class="std__grid">
+      <article class="std__item rv" data-d="1">
+        <span class="n">i</span><hr class="lacquer rv-line" data-d="1" />
+        <h3>Fixed prices, published</h3>
+        <p>Every service in the booking system carries a set price and an expected
+           duration. You choose the service, see the cost and the time it takes, then confirm.</p>
+      </article>
+      <article class="std__item rv" data-d="2">
+        <span class="n">ii</span><hr class="lacquer rv-line" data-d="2" />
+        <h3>More than nails</h3>
+        <p>Nails, lash extensions, head spa and waxing are all offered in‑studio,
+           so one visit can cover several appointments you might otherwise split up.</p>
+      </article>
+      <article class="std__item rv" data-d="3">
+        <span class="n">iii</span><hr class="lacquer rv-line" data-d="3" />
+        <h3>Two Surrey studios</h3>
+        <p>Fleetwood on Fraser Highway and Newton on King George Boulevard, each with
+           its own booking calendar and phone line.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section gal" id="work">
+  <div class="shell">
+    <div class="gal__head">
+      <div>
+        <p class="label rv">04 — Selected work</p>
+        <h2 class="h2 rv" data-d="1" style="margin-top:1rem">Sets from the studio.</h2>
+      </div>
+      <p class="lead measure rv" data-d="2" style="margin:0">
+        Photographed at LaVie. Select any set to view it larger.
+      </p>
+    </div>
+
+    <div class="gal__filters" role="group" aria-label="Filter work by style">
+      <button type="button" data-cat="all" aria-pressed="true">All</button>
+      <button type="button" data-cat="ext" aria-pressed="false">Extensions</button>
+      <button type="button" data-cat="art" aria-pressed="false">Nail art</button>
+      <button type="button" data-cat="nude" aria-pressed="false">Nude &amp; French</button>
+      <button type="button" data-cat="lash" aria-pressed="false">Lash</button>
+    </div>
+    <p class="vh" id="galStatus" role="status" aria-live="polite"></p>
+
+    <div class="gal__grid">
+      <figure class="gal__fig gal__fig--feature" data-cats="ext art">
+        <button class="gal__open" type="button" data-title="Crystal &amp; heart-charm set" data-desc="Long coffin extensions, clear build with gold heart charms, crystal clusters and glitter fade.">
+          <img src="assets/img/charms-1600.jpg" srcset="assets/img/charms-800.jpg 800w, assets/img/charms-1600.jpg 1600w" sizes="(max-width: 760px) 92vw, 50vw" data-full="assets/img/charms-1600.jpg" alt="Long clear coffin extensions set with gold heart charms, iridescent crystals and fine glitter, against white fur." width="1280" height="720" loading="lazy" />
+          <span class="gal__meta"><span>Extensions · Charms</span><span>View set</span></span>
+        </button>
+      </figure>
+
+      <figure class="gal__fig gal__fig--tall" data-cats="nude art">
+        <button class="gal__open" type="button" data-title="Blush linework with crystals" data-desc="Coffin length in soft blush, fine white linework and clustered crystal accents.">
+          <img src="assets/img/1-1600.jpg" srcset="assets/img/1-800.jpg 800w, assets/img/1-1600.jpg 1600w" sizes="(max-width: 760px) 46vw, 26vw" data-full="assets/img/1-1600.jpg" alt="Blush coffin nails with fine white linework and clustered crystal accents." width="1600" height="1894" loading="lazy" />
+          <span class="gal__meta"><span>Nude · Crystals</span><span>View set</span></span>
+        </button>
+      </figure>
+
+      <figure class="gal__fig gal__fig--tall" data-cats="art nude">
+        <button class="gal__open" type="button" data-title="3D floral almond set" data-desc="Almond shape in nude and pink with sculpted 3D flowers, fine swirls and rhinestones.">
+          <img src="assets/img/2-1600.jpg" srcset="assets/img/2-800.jpg 800w, assets/img/2-1600.jpg 1600w" sizes="(max-width: 760px) 46vw, 26vw" data-full="assets/img/2-1600.jpg" alt="Nude and pink almond nails with sculpted three-dimensional flowers, swirl linework and rhinestones." width="1600" height="2000" loading="lazy" />
+          <span class="gal__meta"><span>Nail art · 3D</span><span>View set</span></span>
+        </button>
+      </figure>
+
+      <figure class="gal__fig" data-cats="art ext">
+        <button class="gal__open" type="button" data-title="Butterfly &amp; pearl set" data-desc="Long coffin extensions in lilac with blue butterfly decals, textured blue tips, pearls and 3D florals.">
+          <img src="assets/img/3-1600.jpg" srcset="assets/img/3-800.jpg 800w, assets/img/3-1600.jpg 1600w" sizes="(max-width: 760px) 46vw, 32vw" data-full="assets/img/3-1600.jpg" alt="Long lilac coffin nails with blue butterfly decals, textured pale blue tips, pearls and small 3D flowers." width="1440" height="1534" loading="lazy" />
+          <span class="gal__meta"><span>Nail art · Butterfly</span><span>View set</span></span>
+        </button>
+      </figure>
+
+      <figure class="gal__fig" data-cats="nude art">
+        <button class="gal__open" type="button" data-title="Gold-outlined French" data-desc="Square nude nails outlined in fine gold with white floral brushwork and pearl detail.">
+          <img src="assets/img/5-1600.jpg" srcset="assets/img/5-800.jpg 800w, assets/img/5-1600.jpg 1600w" sizes="(max-width: 760px) 46vw, 32vw" data-full="assets/img/5-1600.jpg" alt="Square nude nails outlined in fine gold with white floral brushwork and pearl detailing." width="1600" height="1711" loading="lazy" />
+          <span class="gal__meta"><span>French · Gold</span><span>View set</span></span>
+        </button>
+      </figure>
+
+      <figure class="gal__fig" data-cats="art">
+        <button class="gal__open" type="button" data-title="Black &amp; red rose stiletto" data-desc="Sheer stiletto nails with black outlined rose artwork and metallic red centres.">
+          <img src="assets/img/6-1600.jpg" srcset="assets/img/6-800.jpg 800w, assets/img/6-1600.jpg 1600w" sizes="(max-width: 760px) 46vw, 32vw" data-full="assets/img/6-1600.jpg" alt="Sheer stiletto nails painted with black outlined roses and metallic red centres, against a pink floral backdrop." width="1600" height="2000" loading="lazy" />
+          <span class="gal__meta"><span>Nail art · Hand-painted</span><span>View set</span></span>
+        </button>
+      </figure>
+
+      <figure class="gal__fig" data-cats="art nude">
+        <button class="gal__open" type="button" data-title="Pastel swirl French" data-desc="Matte coffin nails with pastel rainbow swirls tracing a soft French edge.">
+          <img src="assets/img/9-1600.jpg" srcset="assets/img/9-800.jpg 800w, assets/img/9-1600.jpg 1600w" sizes="(max-width: 760px) 46vw, 32vw" data-full="assets/img/9-1600.jpg" alt="Matte pink coffin nails with pastel rainbow swirl lines tracing a soft French edge." width="1440" height="1722" loading="lazy" />
+          <span class="gal__meta"><span>Swirl · Pastel</span><span>View set</span></span>
+        </button>
+      </figure>
+
+      <figure class="gal__fig" data-cats="nude">
+        <button class="gal__open" type="button" data-title="White swirl French" data-desc="Long square nails with a crisp white French tip and fine white swirl linework.">
+          <img src="assets/img/35-1600.jpg" srcset="assets/img/35-800.jpg 800w, assets/img/35-1600.jpg 1600w" sizes="(max-width: 760px) 46vw, 32vw" data-full="assets/img/35-1600.jpg" alt="Long square nails with crisp white French tips and fine white swirl linework." width="1200" height="1172" loading="lazy" />
+          <span class="gal__meta"><span>French · Linework</span><span>View set</span></span>
+        </button>
+      </figure>
+
+      <figure class="gal__fig" data-cats="lash">
+        <button class="gal__open" type="button" data-title="Lash extensions" data-desc="Close-up of a finished lash extension set with a defined, tapered outer edge.">
+          <img src="assets/img/26-800.jpg" srcset="assets/img/26-800.jpg 800w" sizes="(max-width: 760px) 46vw, 32vw" data-full="assets/img/26-800.jpg" alt="Close-up of a finished lash extension set with defined, tapered lashes at the outer corner." width="736" height="736" loading="lazy" />
+          <span class="gal__meta"><span>Lash · Extensions</span><span>View set</span></span>
+        </button>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<dialog class="lb" id="lightbox" aria-label="Work viewer">
+  <div class="lb__box">
+    <div class="lb__top">
+      <span class="lb__count" id="lbCount">1 / 9</span>
+      <button class="lb__x" id="lbClose" type="button">Close</button>
+    </div>
+    <div class="lb__stage"><img id="lbImg" alt="" /></div>
+    <div class="lb__bot">
+      <p class="lb__cap"><b id="lbTitle"></b><span id="lbDesc"></span></p>
+      <div class="lb__nav">
+        <button id="lbPrev" type="button" aria-label="Previous set">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M14 8H2m5-5L2 8l5 5" stroke="currentColor" stroke-width="1.4"/></svg>
+        </button>
+        <button id="lbNext" type="button" aria-label="Next set">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.4"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section tst" id="reviews">
+  <div class="shell">
+    <div class="grid12">
+      <div class="tst__quote">
+        <p class="label rv">05 — Clients</p>
+        <div class="todo rv" data-d="1" style="margin-top:1.6rem">
+          <strong>Content required — client testimonials</strong>
+          <p>Three to five reviews, ideally pulled from the salon's Google Business Profile
+             so they can be attributed and verified. For each one supply: the review text,
+             the client's first name or initials, the service they booked, the source
+             (Google / Facebook), the star rating and the date.</p>
+          <p>Reviews that mention <em>how long a set lasted</em>, <em>cleanliness</em>, or
+             <em>a specific technician</em> are the most persuasive at this point in the page
+             and should be prioritised. Nothing has been invented here — this block is
+             intentionally empty until real reviews are supplied.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section faq" id="questions">
+  <div class="shell">
+    <div class="grid12 faq__grid">
+      <div class="faq__aside">
+        <p class="label rv">06 — Before you book</p>
+        <h2 class="h2 rv" data-d="1" style="margin-top:1rem">Questions,<br />answered.</h2>
+        <p class="rv" data-d="2" style="margin-top:1.2rem;color:var(--text-muted)">
+          Anything not covered here, call the studio directly — Fleetwood
+          <a href="tel:+17785653515">778‑565‑3515</a>, Newton
+          <a href="tel:+17785921049">778‑592‑1049</a>.
+        </p>
+      </div>
+
+      <div class="faq__list">
+        <div class="faq__item">
+          <h3><button class="faq__q" type="button" aria-expanded="false">How do I book an appointment?<span class="faq__ico" aria-hidden="true"></span></button></h3>
+          <div class="faq__a"><div><p>Booking is handled online through Dash Booking, and each studio has its own calendar.
+            Choose <a href="https://www.dashbooking.com/salon/lavie-nail-lounge/booking" target="_blank" rel="noopener">Fleetwood</a>
+            or <a href="https://www.dashbooking.com/salon/lavie-nail-lounge-newton/booking" target="_blank" rel="noopener">Newton</a>,
+            pick your service, and you will see the price and duration before you confirm.
+            You can also call the studio directly.</p></div></div>
+        </div>
+
+        <div class="faq__item">
+          <h3><button class="faq__q" type="button" aria-expanded="false">Will I know the price before I arrive?<span class="faq__ico" aria-hidden="true"></span></button></h3>
+          <div class="faq__a"><div><p>Yes. Every service on the menu is listed with a fixed price and an expected duration,
+            and both are shown in the booking system at the point of selection. Add‑ons such as
+            longer nails, design work, shellac and removals are listed as their own priced items
+            rather than being added silently.</p></div></div>
+        </div>
+
+        <div class="faq__item">
+          <h3><button class="faq__q" type="button" aria-expanded="false">What is the difference between Gel‑X and a nail extension?<span class="faq__ico" aria-hidden="true"></span></button></h3>
+          <div class="faq__a"><div><p>Gel‑X uses a pre‑formed soft gel tip bonded to the natural nail and cured under a lamp —
+            a lighter, more flexible extension, booked as a single 75‑minute service at $75.</p>
+            <p>Our other extensions are sculpted on the nail in powder colour, ombré or UV gel,
+            booked either as a full set or as a fill. Full sets run $65 to $75 and fills $60 to $70,
+            each around 60 minutes.</p></div></div>
+        </div>
+
+        <div class="faq__item">
+          <h3><button class="faq__q" type="button" aria-expanded="false">How much time should I set aside?<span class="faq__ico" aria-hidden="true"></span></button></h3>
+          <div class="faq__a"><div><p>It depends on the service. The shortest appointments — shellac colour, a manicure, most
+            waxing — run 15 to 30 minutes. Extensions, pedicures and lash fills are typically 45 to
+            75 minutes. The longest bookings are a mega lash set at 120 minutes and the deluxe
+            manicure and pedicure set or head and body renewal at 90 minutes.</p></div></div>
+        </div>
+
+        <div class="faq__item">
+          <h3><button class="faq__q" type="button" aria-expanded="false">Do you repair a broken nail?<span class="faq__ico" aria-hidden="true"></span></button></h3>
+          <div class="faq__a"><div><p>Yes — repairs are on the menu as a 15‑minute service. What you pay depends on how long
+            ago the set was applied, so confirm the rate with the studio when you book the repair.</p></div></div>
+        </div>
+
+        <div class="faq__item">
+          <h3><button class="faq__q" type="button" aria-expanded="false">Do you take children?<span class="faq__ico" aria-hidden="true"></span></button></h3>
+          <div class="faq__a"><div><p>Yes. A kiddy manicure is offered as its own 30‑minute service at $20.</p></div></div>
+        </div>
+
+        <div class="faq__item">
+          <h3><button class="faq__q" type="button" aria-expanded="false">Can I buy a gift card?<span class="faq__ico" aria-hidden="true"></span></button></h3>
+          <div class="faq__a"><div><p>Gift cards are available through the studio's Dash Booking page, or by calling
+            either location directly.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="section cta" id="book">
+  <div class="shell cta__inner">
+    <p class="label label--invert rv">07 — Reserve</p>
+    <h2 class="rv" data-d="1">Book the <span class="it">closer look.</span></h2>
+    <p class="lead cta__lead rv" data-d="2">
+      Choose your studio, pick a service, and see the price and the length of the
+      appointment before you confirm.
+    </p>
+    <div class="cta__row rv" data-d="3">
+      <a class="btn btn--onDark" href="https://www.dashbooking.com/salon/lavie-nail-lounge/booking" target="_blank" rel="noopener">
+        <span class="btn__t">Book — Fleetwood</span>
+        <svg class="btn__i" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.4"/></svg>
+      </a>
+      <a class="btn btn--ghostDark" href="https://www.dashbooking.com/salon/lavie-nail-lounge-newton/booking" target="_blank" rel="noopener">
+        <span class="btn__t">Book — Newton</span>
+        <svg class="btn__i" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.4"/></svg>
+      </a>
+    </div>
+    <p class="cta__note rv" data-d="4">
+      Prefer to speak to someone? Fleetwood <a href="tel:+17785653515">778‑565‑3515</a>
+      · Newton <a href="tel:+17785921049">778‑592‑1049</a>
+    </p>
+  </div>
+</section>
+
+<!-- ============ STUDIOS ============ -->
+<section class="section loc" id="studios">
+  <div class="shell">
+    <p class="label rv">08 — Find us</p>
+    <h2 class="h2 rv" data-d="1" style="margin-top:1rem">Two studios in Surrey.</h2>
+
+    <div class="loc__grid">
+      <article class="loc__card rv" data-d="1">
+        <h3>Fleetwood</h3>
+        <address>
+          15988 Fraser Hwy Unit&nbsp;#202<br />Surrey, BC V4N&nbsp;0X8<br />
+          <a href="tel:+17785653515">778‑565‑3515</a>
+        </address>
+        <ul class="loc__hours">
+          <li>Monday – Friday <span>10:00 – 19:00</span></li>
+          <li>Saturday <span>10:00 – 18:00</span></li>
+          <li>Sunday <span>11:00 – 17:00</span></li>
+        </ul>
+        <iframe class="loc__map" src="https://www.google.com/maps?q=15988+Fraser+Hwy+Unit+%23202,+Surrey,+BC+V4N+0X8&output=embed"
+                loading="lazy" title="Map — LaVie Nail Lounge Fleetwood"></iframe>
+        <div class="loc__act">
+          <a class="btn btn--sm" href="https://www.dashbooking.com/salon/lavie-nail-lounge/booking" target="_blank" rel="noopener"><span class="btn__t">Book an Appointment</span></a>
+          <a class="btn btn--sm btn--ghost" href="tel:+17785653515"><span class="btn__t">Call</span></a>
+        </div>
+      </article>
+
+      <article class="loc__card rv" data-d="2">
+        <h3>Newton</h3>
+        <address>
+          7218 King George Blvd&nbsp;#118<br />Surrey, BC V3W&nbsp;5A5<br />
+          <a href="tel:+17785921049">778‑592‑1049</a>
+        </address>
+        <ul class="loc__hours">
+          <li>Monday – Friday <span>10:00 – 19:00</span></li>
+          <li>Saturday <span>10:00 – 18:00</span></li>
+          <li>Sunday <span>11:00 – 17:00</span></li>
+        </ul>
+        <iframe class="loc__map" src="https://www.google.com/maps?q=7218+King+George+Blvd+%23118,+Surrey,+BC+V3W+5A5&output=embed"
+                loading="lazy" title="Map — LaVie Nail Lounge Newton"></iframe>
+        <div class="loc__act">
+          <a class="btn btn--sm" href="https://www.dashbooking.com/salon/lavie-nail-lounge-newton/booking" target="_blank" rel="noopener"><span class="btn__t">Book an Appointment</span></a>
+          <a class="btn btn--sm btn--ghost" href="tel:+17785921049"><span class="btn__t">Call</span></a>
+        </div>
+      </article>
+    </div>
+
+    <div class="todo rv" style="margin-top:clamp(2rem,4vw,3rem);max-width:70ch">
+      <strong>Confirm before launch — hours &amp; third location</strong>
+      <p>The opening hours shown above need a final check against the studios' actual
+        schedule. They are the hours currently listed for Fleetwood on third‑party
+        directories and are consistent with the booking system, but they are not published
+        on lavienaillounge.ca and Newton's hours have not been separately confirmed.</p>
+      <p>The current site also lists <strong>3D Nails Spa</strong> (8850 Walnut Grove Dr,
+        Langley Twp, BC V1M&nbsp;3W4 · 604‑888‑1619) as a related salon. It has been left off
+        this page pending a decision on whether it should appear as a LaVie location, a sister
+        salon, or not at all — and it needs its own booking link if it is included.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="ft">
+  <div class="shell">
+    <div class="ft__top">
+      <div class="ft__brand">
+        <img src="assets/logo-wordmark.svg" alt="LaVie Nail Lounge" width="420" height="72" />
+        <p>A full‑service nail and beauty studio in Surrey, British Columbia.
+           Nails, lash extensions, head spa and waxing.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="services.html">Full price menu</a></li>
+          <li><a href="#work">Selected work</a></li>
+          <li><a href="#questions">Questions</a></li>
+          <li><a href="#studios">Studios</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Book</h4>
+        <ul>
+          <li><a href="https://www.dashbooking.com/salon/lavie-nail-lounge/booking" target="_blank" rel="noopener">Fleetwood — book online</a></li>
+          <li><a href="https://www.dashbooking.com/salon/lavie-nail-lounge-newton/booking" target="_blank" rel="noopener">Newton — book online</a></li>
+          <li><a href="tel:+17785653515">778‑565‑3515 — Fleetwood</a></li>
+          <li><a href="tel:+17785921049">778‑592‑1049 — Newton</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft__bot">
+      <p style="margin:0">© <span data-year></span> LaVie Nail Lounge. All rights reserved.</p>
+      <p style="margin:0">Surrey, British Columbia</p>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a class="btn" href="https://www.dashbooking.com/salon/lavie-nail-lounge/booking" target="_blank" rel="noopener">
+    <span class="btn__t">Book an Appointment</span>
+    <svg class="btn__i" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.4"/></svg>
+  </a>
+</div>
+
+<script src="assets/lavie.js" defer></script>
+</body>
 </html>
