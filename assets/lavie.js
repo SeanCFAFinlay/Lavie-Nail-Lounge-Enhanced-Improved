@@ -295,7 +295,9 @@
   if (sticky) {
     var finalCta = $('#book');
     var pastHero = false, atCta = false;
-    var sync = function () { sticky.classList.toggle('is-shown', pastHero && !atCta); };
+    // Persistent Book/Call/Directions bar on mobile — visible from the top so the
+    // booking action is always a thumb away; only hides over the booking section.
+    var sync = function () { sticky.classList.toggle('is-shown', !atCta); };
 
     if ('IntersectionObserver' in window) {
       if (hero) {

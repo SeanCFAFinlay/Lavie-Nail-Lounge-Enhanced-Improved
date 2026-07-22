@@ -684,17 +684,23 @@ em.accent { font-style: italic; color: var(--merlot); }
 .ft a:hover { color: var(--champagne); }
 .ft__bot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding-top: 1.8rem; font-size: var(--fs-small); color: rgba(247,241,236,.5); }
 
-/* ---------- 19. MOBILE STICKY CTA ---------- */
+/* ---------- 19. MOBILE BOOK / CALL / DIRECTIONS BAR ---------- */
 .sticky {
   position: fixed; z-index: var(--z-sticky);
-  left: var(--gutter); right: var(--gutter);
-  bottom: calc(.9rem + env(safe-area-inset-bottom, 0px));
-  display: none;
-  transform: translateY(160%);
+  left: 0; right: 0; bottom: 0;
+  display: none; gap: .45rem;
+  padding: .5rem var(--gutter) calc(.5rem + env(safe-area-inset-bottom, 0px));
+  background: rgba(255,250,244,.86);
+  -webkit-backdrop-filter: var(--glass-blur); backdrop-filter: var(--glass-blur);
+  border-top: 1px solid var(--glass-bd);
+  box-shadow: 0 -12px 34px -20px rgba(150,110,60,.55);
+  transform: translateY(140%);
   transition: transform var(--d-nav) var(--e-editorial);
 }
 .sticky.is-shown { transform: none; }
-.sticky .btn { width: 100%; box-shadow: var(--shadow-lift); }
+.sticky .btn { flex: 1 1 0; min-width: 0; padding-inline: .4rem; box-shadow: none; }
+.sticky .btn--book { flex: 1.5 1 0; }
+.sticky .btn__t { white-space: nowrap; }
 
 /* ---------- 20. PAGE HEADER (subpages) ---------- */
 .phead {
@@ -721,8 +727,12 @@ em.accent { font-style: italic; color: var(--merlot); }
   .nav__links { display: none; }
   .nav__toggle { display: inline-flex; }
   .hero__copy { grid-column: 1 / 13; }
-  .hero__figure { display: none; }
-  .hero { align-items: center; min-height: 92svh; }
+  /* Mobile: keep a real gallery-preview image above the fold, but compact, and
+     below the headline + booking CTA so the booking action is never pushed down. */
+  .hero__figure { grid-column: 1 / 13; aspect-ratio: 16 / 10; max-height: 34vh; margin-top: clamp(1.1rem,3.5vw,1.6rem); }
+  .hero__figure img { border-radius: 20px 20px 16px 16px; }
+  .hero { align-items: center; min-height: auto; padding-block: clamp(6rem,16vh,7rem) clamp(2rem,5vh,3rem); }
+  .hero__lead { max-width: none; }
   .intro__label { grid-column: 1 / 13; margin-bottom: 1.2rem; }
   .intro__stmt, .intro__body { grid-column: 1 / 13; }
   .intro__fig { grid-column: 1 / 13; margin-top: 2rem; }
@@ -734,7 +744,13 @@ em.accent { font-style: italic; color: var(--merlot); }
   .faq__list { grid-column: 1 / 13; }
   .tst__quote { grid-column: 1 / 13; }
   .ft__top { grid-template-columns: 1fr 1fr; }
-  .sticky { display: block; }
+  /* Book/Call/Directions bar is a persistent full-width row; reserve space so it
+     never covers content or the footer. */
+  .sticky { display: flex; }
+  body { padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0px)); }
+  /* Full-width, stacked booking buttons in the hero — easy thumb targets. */
+  .hero__cta { flex-direction: column; align-items: stretch; }
+  .hero__cta .btn { width: 100%; }
 }
 
 /* Below this the wordmark, the booking pill and the menu control cannot all fit on
@@ -749,11 +765,20 @@ em.accent { font-style: italic; color: var(--merlot); }
   .facts div:nth-child(2n) { border-right: 0; }
   .facts div:nth-child(-n+2) { border-bottom: 1px solid var(--rule); }
   .std__grid { grid-template-columns: 1fr; }
-  .gal__grid { grid-template-columns: repeat(2,1fr); }
-  .gal__fig { grid-column: span 1; grid-row: auto; }
-  .gal__fig--feature { grid-column: span 2; grid-row: auto; height: auto; }
+  /* Swipeable gallery: a horizontal snap rail, one card at a time with the next
+     peeking. Full-bleed to the screen edges; the page itself never scrolls sideways. */
+  .gal__grid {
+    display: flex; gap: .6rem; grid-template-columns: none;
+    overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+    margin-inline: calc(var(--gutter) * -1); padding: .3rem var(--gutter) .8rem;
+    scrollbar-width: none;
+  }
+  .gal__grid::-webkit-scrollbar { display: none; }
+  .gal__fig, .gal__fig--feature {
+    flex: 0 0 78%; max-width: 78%; grid-column: auto; grid-row: auto; height: auto;
+    scroll-snap-align: center;
+  }
   .gal__open, .gal__fig--feature .gal__open { aspect-ratio: 4/5; height: auto; }
-  .gal__fig--feature .gal__open { aspect-ratio: 16/10; }
   /* touch: metadata must not be hover-only */
   .gal__meta { opacity: 1; transform: none; }
   .ft__top { grid-template-columns: 1fr; }
