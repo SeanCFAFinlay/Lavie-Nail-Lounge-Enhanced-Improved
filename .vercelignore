@@ -14,3 +14,7 @@
 /*.jpg
 /*.webp
 /*.zip
+
+# Raw assets scraped from the live lavienaillounge.ca for the rebuild. Staging
+# only — originals are curated and optimised into assets/img/ before use.
+/_scrape

@@ -147,18 +147,31 @@
   var filters = $$('.gal__filters button');
   if (filters.length) {
     var figs = $$('.gal__fig');
+    var grid = $('.gal__grid');
+    var applyFilter = function (cat) {
+      figs.forEach(function (f) {
+        var cats = (f.getAttribute('data-cats') || '').split(' ');
+        f.hidden = !(cat === 'all' || cats.indexOf(cat) !== -1);
+      });
+      var live = $('#galStatus');
+      if (live) {
+        var n = figs.filter(function (f) { return !f.hidden; }).length;
+        live.textContent = n + ' set' + (n === 1 ? '' : 's') + ' shown.';
+      }
+    };
     filters.forEach(function (btn) {
       btn.addEventListener('click', function () {
         var cat = btn.getAttribute('data-cat');
         filters.forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
-        figs.forEach(function (f) {
-          var cats = (f.getAttribute('data-cats') || '').split(' ');
-          f.hidden = !(cat === 'all' || cats.indexOf(cat) !== -1);
-        });
-        var live = $('#galStatus');
-        if (live) {
-          var n = figs.filter(function (f) { return !f.hidden; }).length;
-          live.textContent = n + ' set' + (n === 1 ? '' : 's') + ' shown.';
+        // Cross-dissolve: dip the grid, swap tiles at the low point, settle back.
+        if (grid && !reduced.matches) {
+          grid.classList.add('is-swapping');
+          setTimeout(function () {
+            applyFilter(cat);
+            requestAnimationFrame(function () { grid.classList.remove('is-swapping'); });
+          }, 200);
+        } else {
+          applyFilter(cat);
         }
       });
     });
@@ -379,59 +392,6 @@
     window.addEventListener('scroll', function () {
       if (!pTick) { pTick = true; requestAnimationFrame(drawPar); }
     }, { passive: true });
-  }
-
-  /* ---------- Magnetic buttons — 6px maximum, label never moves away ---------- */
-  if (fine.matches && !reduced.matches) {
-    $$('.btn').forEach(function (btn) {
-      btn.addEventListener('pointermove', function (e) {
-        var r = btn.getBoundingClientRect();
-        var dx = (e.clientX - (r.left + r.width / 2)) / r.width;
-        var dy = (e.clientY - (r.top + r.height / 2)) / r.height;
-        btn.style.transform = 'translate(' + (dx * 6).toFixed(1) + 'px,' + (dy * 5).toFixed(1) + 'px)';
-      });
-      btn.addEventListener('pointerleave', function () { btn.style.transform = ''; });
-    });
-  }
-
-  /* ---------- Contextual cursor ---------- */
-  if (fine.matches && !reduced.matches) {
-    var ring = document.createElement('div'); ring.className = 'cursor';
-    var dot  = document.createElement('div'); dot.className  = 'cursor-dot';
-    document.body.appendChild(ring); document.body.appendChild(dot);
-
-    var rx = 0, ry = 0, tx = 0, ty = 0, running = false;
-    var loop = function () {
-      rx += (tx - rx) * 0.18; ry += (ty - ry) * 0.18;
-      ring.style.transform = 'translate3d(' + rx.toFixed(1) + 'px,' + ry.toFixed(1) + 'px,0)';
-      dot.style.transform  = 'translate3d(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px,0)';
-      if (Math.abs(tx - rx) > 0.1 || Math.abs(ty - ry) > 0.1) requestAnimationFrame(loop);
-      else running = false;
-    };
-    window.addEventListener('pointermove', function (e) {
-      tx = e.clientX; ty = e.clientY;
-      ring.classList.add('is-on'); dot.classList.add('is-on');
-      if (!running) { running = true; requestAnimationFrame(loop); }
-    }, { passive: true });
-    document.addEventListener('pointerleave', function () {
-      ring.classList.remove('is-on'); dot.classList.remove('is-on');
-    });
-
-    var setState = function (cls, invert) {
-      ring.classList.remove('is-view', 'is-book', 'is-invert');
-      if (cls) ring.classList.add(cls);
-      if (invert) ring.classList.add('is-invert');
-    };
-    $$('.gal__open').forEach(function (el) {
-      el.addEventListener('pointerenter', function () { setState('is-view'); });
-      el.addEventListener('pointerleave', function () { setState(null); });
-    });
-    $$('a[href*="dashbooking"], a[href="#book"]').forEach(function (el) {
-      el.addEventListener('pointerenter', function () {
-        setState('is-book', !!el.closest('.cta'));
-      });
-      el.addEventListener('pointerleave', function () { setState(null); });
-    });
   }
 
   /* ---------- Year ---------- */
