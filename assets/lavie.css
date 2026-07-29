@@ -1185,7 +1185,10 @@ html:not(.js) .mpanel[hidden] { display: block; }
 .links__rating span:first-child { color: var(--champagne-lo); letter-spacing: .1em; }
 .links__h { font-size: var(--fs-label); letter-spacing: .2em; text-transform: uppercase;
   color: var(--text-muted); margin: clamp(1.8rem,3.4vw,2.2rem) 0 .8rem; font-weight: 600; }
-.links__h:first-of-type { margin-top: 0; }
+/* Only the first heading loses its top margin. `:first-of-type` looked right but
+   matches the first h1 *and* the first h2, which collapsed the gap above
+   "Prices & studios" and jammed it against the card above. */
+h1.links__h { margin-top: 0; }
 .links__list { list-style: none; margin: 0; padding: 0; display: grid; gap: .6rem; }
 .links__list--split { grid-template-columns: 1fr 1fr; }
 

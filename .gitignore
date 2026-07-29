@@ -1,2 +1,5 @@
 .vercel
 /_scrape
+
+# Design-review screenshots (tools/shots.py)
+.shots/
