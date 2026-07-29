@@ -85,7 +85,7 @@ const PLACE = {
 
 /* Used only when site-data.json does not exist yet. Once it does, the origin
    already in it wins, so `node tools/set_origin.js` is never undone by a refresh. */
-const DEFAULT_ORIGIN = 'https://lavienaillounge.ca';
+const DEFAULT_ORIGIN = 'https://lavie-nail-lounge.vercel.app';
 
 const SITE = {
   brand: 'LaVie Nail Lounge',

@@ -103,15 +103,35 @@ Full background for any item is in `DESIGN.md` §8. Internal — not published (
       @lavie_nail_lounge25). An auto-updating grid needs an Instagram Graph API access token tied
       to a Business account, or a paid third-party widget.
 
-## 3. Before the domain moves
+## 3. Moving to the real domain
 
-- [ ] **Point the domain.** `canonical`, `og:url` and every structured-data URL already say
-      `https://lavienaillounge.ca`. That domain still serves the old site, so those URLs 404
-      today — expected, and they come right the moment DNS moves. If the final address differs,
-      change `site.origin` in `tools/site-data.json` and re-run `node tools/build_pages.js`.
+**Right now the site is pointed at `https://lavie-nail-lounge.vercel.app`.** Every canonical,
+`og:url`, JSON-LD URL and the sitemap say so, which is why nothing 404s and the preview is
+coherent enough to show a client. It is staging, not the destination.
 
-- [ ] **Submit the sitemap** at `https://lavienaillounge.ca/sitemap.xml` in Search Console once
-      the domain is live and verified.
+- [ ] **Switch the domain — one command.** When the real address is available:
+
+      ```
+      node tools/set_origin.js https://lavienaillounge.ca   # or whatever it ends up being
+      node tools/verify.js
+      ```
+
+      That rewrites all ~48 references across the generated *and* hand-written pages, regenerates
+      the studio pages and sitemap, then fails loudly if anything anywhere still mentions the old
+      origin. `verify.js` independently fails if a canonical disagrees. Do not do this with
+      find-and-replace: half the files are generated and half are not, and a canonical left
+      pointing at the wrong host is the one SEO mistake that quietly undoes every other one.
+
+- [ ] **The preview is deliberately `noindex`.** `vercel.json` sends
+      `X-Robots-Tag: noindex, nofollow` for any `*.vercel.app` host. Without it Google could index
+      this copy and then treat the real site as duplicate content when it launches. The rule is
+      **conditional on the hostname**, so the moment a custom domain is attached to the Vercel
+      project it stops applying on its own — there is nothing to remember to switch off. (Note
+      `vercel.json` is strict JSON and cannot carry comments, which is why this is written here.)
+
+- [ ] **After the domain is live:** verify the property in Search Console (see §0 for the
+      verification tag), submit `https://<real-domain>/sitemap.xml`, and confirm with
+      `curl -I https://<real-domain>/` that no `X-Robots-Tag: noindex` is coming back.
 
 - [ ] **Real device testing** — verified in Chromium, Firefox and WebKit via automation, but not
       yet on a physical iPhone or Android handset.
