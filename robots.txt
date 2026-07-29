@@ -1,4 +1,4 @@
-# LaVie Nail Lounge — https://lavienaillounge.ca
+# LaVie Nail Lounge — https://lavie-nail-lounge.vercel.app
 # Everything published here is meant to be indexed. The booking calendars live
 # on dashbooking.com and are crawled there, not through our embed.
 
@@ -10,4 +10,4 @@ Disallow: /_archive/
 Disallow: /_scrape/
 Disallow: /tools/
 
-Sitemap: https://lavienaillounge.ca/sitemap.xml
+Sitemap: https://lavie-nail-lounge.vercel.app/sitemap.xml
