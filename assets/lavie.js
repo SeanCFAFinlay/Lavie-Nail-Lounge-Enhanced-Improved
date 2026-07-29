@@ -290,6 +290,33 @@
     });
   }
 
+  /* ---------- Price menu: one studio at a time ----------
+     The three menus differ, so they are three separate lists rather than one
+     merged table. Without JS all three render in sequence (see the
+     html:not(.js) rules) — nothing is ever hidden behind a control. */
+  var mTabs = $$('.mtab');
+  if (mTabs.length) {
+    var panels = $$('.mpanel');
+    var mStatus = $('#menuStatus');
+    var showMenu = function (key) {
+      mTabs.forEach(function (t) { t.setAttribute('aria-pressed', String(t.getAttribute('data-menu') === key)); });
+      panels.forEach(function (p) { p.hidden = p.getAttribute('data-menu') !== key; });
+      var live = panels.filter(function (p) { return !p.hidden; })[0];
+      if (mStatus && live) {
+        var name = $('h2', live);
+        mStatus.textContent = (name ? name.textContent : key) + ' price menu shown.';
+      }
+    };
+    mTabs.forEach(function (tab) {
+      tab.addEventListener('click', function () { showMenu(tab.getAttribute('data-menu')); });
+    });
+    // Deep links: /services.html#menu-newton, or from a studio page.
+    var wanted = (location.hash || '').replace(/^#menu-/, '');
+    if (wanted && wanted !== location.hash && mTabs.some(function (t) { return t.getAttribute('data-menu') === wanted; })) {
+      showMenu(wanted);
+    }
+  }
+
   /* ---------- Mobile sticky CTA ---------- */
   var sticky = $('.sticky');
   if (sticky) {

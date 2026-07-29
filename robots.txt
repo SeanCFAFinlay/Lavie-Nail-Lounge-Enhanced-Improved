@@ -1,0 +1,13 @@
+# LaVie Nail Lounge — https://lavienaillounge.ca
+# Everything published here is meant to be indexed. The booking calendars live
+# on dashbooking.com and are crawled there, not through our embed.
+
+User-agent: *
+Allow: /
+
+# Never deployed, but named here so a stale link can never surface them.
+Disallow: /_archive/
+Disallow: /_scrape/
+Disallow: /tools/
+
+Sitemap: https://lavienaillounge.ca/sitemap.xml
