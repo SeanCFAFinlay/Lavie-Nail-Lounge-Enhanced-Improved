@@ -1,0 +1,1635 @@
+{
+  "site": {
+    "brand": "LaVie Nail Lounge",
+    "facebook": "https://www.facebook.com/p/Lavie-Nail-Lounge-100075865032810/",
+    "instagram": [
+      "https://www.instagram.com/lavie_nail_lounge21/",
+      "https://www.instagram.com/lavie_nail_lounge25/"
+    ],
+    "origin": "https://lavienaillounge.ca",
+    "captured": "2026-07-29"
+  },
+  "locations": {
+    "fleetwood": {
+      "dash": "lavie-nail-lounge",
+      "slug": "fleetwood",
+      "name": "LaVie Nail Lounge Fleetwood",
+      "short": "Fleetwood",
+      "street": "15988 Fraser Hwy Unit #202",
+      "locality": "Surrey",
+      "region": "BC",
+      "postal": "V4N 0X8",
+      "neighbourhood": "Fleetwood, Surrey",
+      "phoneDisplay": "778‑565‑3515",
+      "phoneTel": "+17785653515",
+      "phoneE164": "+1-778-565-3515",
+      "mapQuery": "15988+Fraser+Hwy+Unit+%23202,+Surrey,+BC+V4N+0X8",
+      "dirQuery": "15988+Fraser+Hwy+Unit+202,+Surrey,+BC+V4N+0X8",
+      "reviewQuery": "LaVie+Nail+Lounge+15988+Fraser+Hwy+Unit+202+Surrey+BC",
+      "img": "29",
+      "imgAlt": "Long coffin nails in white and gold marble with fine gold-foil veining.",
+      "instagram": "https://www.instagram.com/lavie_nail_lounge21/",
+      "lead": "Our original Surrey studio, on Fraser Highway in Fleetwood. The only LaVie location offering Head Spa treatments, alongside nails, lashes and waxing.",
+      "nearby": "On Fraser Highway near 160 Street, upstairs in the Fleetwood shops.",
+      "booking": "https://www.dashbooking.com/salon/lavie-nail-lounge/booking",
+      "hours": [
+        [
+          "10:00",
+          "18:00"
+        ],
+        [
+          "10:00",
+          "19:00"
+        ],
+        [
+          "10:00",
+          "19:00"
+        ],
+        [
+          "10:00",
+          "19:00"
+        ],
+        [
+          "10:00",
+          "19:00"
+        ],
+        [
+          "10:00",
+          "19:00"
+        ],
+        [
+          "10:00",
+          "18:00"
+        ]
+      ],
+      "rating": {
+        "value": 4.55,
+        "count": 153
+      },
+      "staff": [
+        {
+          "name": "Anna",
+          "groups": [
+            "Add-ons",
+            "Hello Kiddy — children",
+            "Nail Extensions",
+            "Pedicure Packages",
+            "Shellac & Gel Colour"
+          ]
+        },
+        {
+          "name": "Ayla",
+          "groups": [
+            "Add-ons",
+            "Gel‑X",
+            "Hello Kiddy — children",
+            "Nail Extensions",
+            "Pedicure Packages",
+            "Shellac & Gel Colour",
+            "Waxing"
+          ]
+        },
+        {
+          "name": "Cathy",
+          "groups": [
+            "Add-ons",
+            "Head Spa",
+            "Hello Kiddy — children",
+            "Nail Extensions",
+            "Pedicure Packages",
+            "Shellac & Gel Colour"
+          ]
+        },
+        {
+          "name": "Emilia",
+          "groups": [
+            "Add-ons",
+            "Gel‑X",
+            "Head Spa",
+            "Hello Kiddy — children",
+            "Nail Extensions",
+            "Pedicure Packages",
+            "Shellac & Gel Colour",
+            "Waxing"
+          ]
+        },
+        {
+          "name": "Hieu",
+          "groups": [
+            "Add-ons",
+            "Hello Kiddy — children",
+            "Pedicure Packages",
+            "Shellac & Gel Colour"
+          ]
+        },
+        {
+          "name": "Jen",
+          "groups": [
+            "Add-ons",
+            "Gel‑X",
+            "Hello Kiddy — children",
+            "Nail Extensions",
+            "Pedicure Packages",
+            "Shellac & Gel Colour"
+          ]
+        },
+        {
+          "name": "Jenny",
+          "groups": [
+            "Add-ons",
+            "Hello Kiddy — children",
+            "Nail Extensions",
+            "Pedicure Packages",
+            "Shellac & Gel Colour"
+          ]
+        },
+        {
+          "name": "Julie",
+          "groups": [
+            "Add-ons",
+            "Gel‑X",
+            "Head Spa",
+            "Hello Kiddy — children",
+            "Lash Extensions",
+            "Nail Extensions",
+            "Pedicure Packages"
+          ]
+        },
+        {
+          "name": "Kelly",
+          "groups": [
+            "Add-ons",
+            "Hello Kiddy — children",
+            "Nail Extensions",
+            "Pedicure Packages",
+            "Shellac & Gel Colour"
+          ]
+        },
+        {
+          "name": "Mochi",
+          "groups": [
+            "Gel‑X",
+            "Hello Kiddy — children",
+            "Pedicure Packages",
+            "Shellac & Gel Colour"
+          ]
+        },
+        {
+          "name": "Ngoc",
+          "groups": [
+            "Add-ons",
+            "Hello Kiddy — children",
+            "Nail Extensions",
+            "Pedicure Packages",
+            "Shellac & Gel Colour"
+          ]
+        },
+        {
+          "name": "Phuc",
+          "groups": [
+            "Add-ons",
+            "Hello Kiddy — children",
+            "Nail Extensions",
+            "Pedicure Packages",
+            "Shellac & Gel Colour"
+          ]
+        },
+        {
+          "name": "Serena",
+          "groups": [
+            "Add-ons",
+            "Gel‑X",
+            "Hello Kiddy — children",
+            "Nail Extensions",
+            "Pedicure Packages",
+            "Shellac & Gel Colour"
+          ]
+        },
+        {
+          "name": "Sunny",
+          "groups": [
+            "Add-ons",
+            "Head Spa",
+            "Hello Kiddy — children",
+            "Nail Extensions",
+            "Pedicure Packages",
+            "Shellac & Gel Colour",
+            "Waxing"
+          ]
+        },
+        {
+          "name": "Thao",
+          "groups": [
+            "Add-ons",
+            "Gel‑X",
+            "Hello Kiddy — children",
+            "Nail Extensions",
+            "Pedicure Packages",
+            "Shellac & Gel Colour",
+            "Waxing"
+          ]
+        },
+        {
+          "name": "Vivian",
+          "groups": [
+            "Add-ons",
+            "Gel‑X",
+            "Hello Kiddy — children",
+            "Nail Extensions",
+            "Pedicure Packages",
+            "Shellac & Gel Colour",
+            "Waxing"
+          ]
+        }
+      ],
+      "menu": [
+        {
+          "group": "Gel‑X",
+          "items": [
+            {
+              "name": "Gel‑X",
+              "min": 75,
+              "from": false,
+              "price": 75
+            }
+          ]
+        },
+        {
+          "group": "Nail Extensions",
+          "items": [
+            {
+              "name": "Full Set Powder Colour",
+              "min": 60,
+              "from": false,
+              "price": 65
+            },
+            {
+              "name": "Fill Powder Colour",
+              "min": 60,
+              "from": false,
+              "price": 60
+            },
+            {
+              "name": "Full Set Ombré",
+              "min": 60,
+              "from": true,
+              "price": 75
+            },
+            {
+              "name": "Fill Ombré",
+              "min": 60,
+              "from": true,
+              "price": 70
+            },
+            {
+              "name": "Full Set UV Gel",
+              "min": 60,
+              "from": false,
+              "price": 75
+            },
+            {
+              "name": "Fill UV Gel",
+              "min": 60,
+              "from": false,
+              "price": 65
+            },
+            {
+              "name": "Fix (under Policy <7 Days)",
+              "min": 15,
+              "from": false,
+              "price": 7
+            },
+            {
+              "name": "Fix (>7 Days)",
+              "min": 15,
+              "from": false,
+              "price": 0
+            },
+            {
+              "name": "French",
+              "min": 45,
+              "from": false,
+              "price": 15
+            }
+          ]
+        },
+        {
+          "group": "Pedicure Packages",
+          "items": [
+            {
+              "name": "Spa Pedicure",
+              "min": 45,
+              "from": false,
+              "price": 37
+            },
+            {
+              "name": "Manicure",
+              "min": 30,
+              "from": false,
+              "price": 25
+            },
+            {
+              "name": "Manicure / Pedicure Set",
+              "min": 60,
+              "from": false,
+              "price": 60
+            },
+            {
+              "name": "Collagen Pedicure",
+              "min": 75,
+              "from": false,
+              "price": 70
+            },
+            {
+              "name": "Deluxe Pedicure",
+              "min": 60,
+              "from": false,
+              "price": 58
+            },
+            {
+              "name": "Deluxe Manicure",
+              "min": 45,
+              "from": false,
+              "price": 40
+            },
+            {
+              "name": "Deluxe Manicure / Pedicure Set",
+              "min": 90,
+              "from": false,
+              "price": 92
+            },
+            {
+              "name": "Cut Toe",
+              "min": 15,
+              "from": false,
+              "price": 20
+            }
+          ]
+        },
+        {
+          "group": "Lash Extensions",
+          "items": [
+            {
+              "name": "Volume Set",
+              "min": 75,
+              "from": false,
+              "price": 120
+            },
+            {
+              "name": "Volume Fill",
+              "min": 60,
+              "from": true,
+              "price": 100
+            },
+            {
+              "name": "Hybrid Set",
+              "min": 60,
+              "from": false,
+              "price": 110
+            },
+            {
+              "name": "Hybrid Fill",
+              "min": 60,
+              "from": false,
+              "price": 90
+            },
+            {
+              "name": "Classic Set",
+              "min": 60,
+              "from": false,
+              "price": 100
+            },
+            {
+              "name": "Classic Fill",
+              "min": 60,
+              "from": false,
+              "price": 85
+            },
+            {
+              "name": "Mega Set",
+              "min": 120,
+              "from": false,
+              "price": 160
+            },
+            {
+              "name": "Mega Fill",
+              "min": 90,
+              "from": false,
+              "price": 130
+            },
+            {
+              "name": "Lash Extension Removal",
+              "min": 15,
+              "from": false,
+              "price": 20
+            }
+          ]
+        },
+        {
+          "group": "Head Spa",
+          "items": [
+            {
+              "name": "Luxurious Serenity Head & Body Renewal",
+              "min": 90,
+              "from": false,
+              "price": 120
+            },
+            {
+              "name": "Elite Wellness Head Experience",
+              "min": 75,
+              "from": false,
+              "price": 95
+            },
+            {
+              "name": "Regular Hair Wash",
+              "min": 45,
+              "from": false,
+              "price": 65
+            }
+          ]
+        },
+        {
+          "group": "Shellac & Gel Colour",
+          "items": [
+            {
+              "name": "Shellac / Gel Colour — New",
+              "min": 30,
+              "from": false,
+              "price": 25
+            },
+            {
+              "name": "Gel French",
+              "min": 30,
+              "from": false,
+              "price": 30
+            },
+            {
+              "name": "With Manicure",
+              "min": 30,
+              "from": false,
+              "price": 40
+            },
+            {
+              "name": "With Pedicure",
+              "min": 45,
+              "from": false,
+              "price": 52
+            },
+            {
+              "name": "With Manicure / Pedicure Set",
+              "min": 90,
+              "from": false,
+              "price": 90
+            }
+          ]
+        },
+        {
+          "group": "Waxing",
+          "items": [
+            {
+              "name": "Brow Wax",
+              "min": 15,
+              "from": false,
+              "price": 12
+            },
+            {
+              "name": "Upper Lip Wax",
+              "min": 15,
+              "from": false,
+              "price": 6
+            },
+            {
+              "name": "Chin Wax",
+              "min": 15,
+              "from": false,
+              "price": 6
+            },
+            {
+              "name": "Full Arm Wax",
+              "min": 30,
+              "from": false,
+              "price": 35
+            },
+            {
+              "name": "Half Arm Wax",
+              "min": 30,
+              "from": false,
+              "price": 25
+            },
+            {
+              "name": "Full Leg Wax",
+              "min": 45,
+              "from": true,
+              "price": 50
+            },
+            {
+              "name": "Half Leg Wax",
+              "min": 30,
+              "from": false,
+              "price": 37
+            },
+            {
+              "name": "Underarm Wax",
+              "min": 30,
+              "from": false,
+              "price": 25
+            },
+            {
+              "name": "Bikini Wax",
+              "min": 30,
+              "from": false,
+              "price": 30
+            },
+            {
+              "name": "Brazilian Wax",
+              "min": 60,
+              "from": true,
+              "price": 60
+            },
+            {
+              "name": "Back Wax",
+              "min": 45,
+              "from": true,
+              "price": 45
+            }
+          ]
+        },
+        {
+          "group": "Add-ons",
+          "items": [
+            {
+              "name": "Long Nails",
+              "min": 15,
+              "from": true,
+              "price": 10
+            },
+            {
+              "name": "Take Off",
+              "min": 15,
+              "from": false,
+              "price": 20
+            },
+            {
+              "name": "Design",
+              "min": 15,
+              "from": true,
+              "price": 10
+            },
+            {
+              "name": "Add Shellac",
+              "min": 15,
+              "from": false,
+              "price": 15
+            }
+          ]
+        },
+        {
+          "group": "Hello Kiddy — children",
+          "items": [
+            {
+              "name": "Kiddy Manicure",
+              "min": 30,
+              "from": false,
+              "price": 20
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "groups": 9,
+        "services": 51
+      },
+      "promotions": []
+    },
+    "newton": {
+      "dash": "lavie-nail-lounge-newton",
+      "slug": "newton",
+      "name": "LaVie Nail Lounge Newton",
+      "short": "Newton",
+      "street": "7218 King George Blvd #118",
+      "locality": "Surrey",
+      "region": "BC",
+      "postal": "V3W 5A5",
+      "neighbourhood": "Newton, Surrey",
+      "phoneDisplay": "778‑592‑1049",
+      "phoneTel": "+17785921049",
+      "phoneE164": "+1-778-592-1049",
+      "mapQuery": "7218+King+George+Blvd+%23118,+Surrey,+BC+V3W+5A5",
+      "dirQuery": "7218+King+George+Blvd+118,+Surrey,+BC+V3W+5A5",
+      "reviewQuery": "LaVie+Nail+Lounge+7218+King+George+Blvd+118+Surrey+BC",
+      "img": "3",
+      "imgAlt": "Long lilac coffin nails with blue butterfly decals, textured pale blue tips, pearls and small 3D flowers.",
+      "instagram": "https://www.instagram.com/lavie_nail_lounge25/",
+      "lead": "Our King George Boulevard studio in Newton, and the latest-opening of the three — until 9pm on weekdays. The only location offering dipping powder.",
+      "nearby": "On King George Boulevard near 72 Avenue.",
+      "booking": "https://www.dashbooking.com/salon/lavie-nail-lounge-newton/booking",
+      "hours": [
+        [
+          "11:00",
+          "18:00"
+        ],
+        [
+          "09:00",
+          "21:00"
+        ],
+        [
+          "09:00",
+          "21:00"
+        ],
+        [
+          "09:00",
+          "21:00"
+        ],
+        [
+          "09:00",
+          "21:00"
+        ],
+        [
+          "09:00",
+          "21:00"
+        ],
+        [
+          "09:00",
+          "19:00"
+        ]
+      ],
+      "rating": {
+        "value": 4.5,
+        "count": 115
+      },
+      "staff": [
+        {
+          "name": "Bryan",
+          "groups": [
+            "Pedicure & Manicure"
+          ]
+        },
+        {
+          "name": "David",
+          "groups": [
+            "Acrylic, Solar & Gel Extensions",
+            "Dipping Powder",
+            "Lash Extensions",
+            "Pedicure & Manicure"
+          ]
+        },
+        {
+          "name": "Kevin",
+          "groups": [
+            "Acrylic, Solar & Gel Extensions",
+            "Dipping Powder",
+            "Lash Extensions",
+            "Pedicure & Manicure"
+          ]
+        },
+        {
+          "name": "Leon",
+          "groups": [
+            "Acrylic, Solar & Gel Extensions",
+            "Dipping Powder",
+            "Pedicure & Manicure"
+          ]
+        },
+        {
+          "name": "Mia",
+          "groups": [
+            "Acrylic, Solar & Gel Extensions",
+            "Dipping Powder",
+            "Lash Extensions",
+            "Pedicure & Manicure"
+          ]
+        },
+        {
+          "name": "Mila",
+          "groups": [
+            "Acrylic, Solar & Gel Extensions",
+            "Dipping Powder",
+            "Lash Extensions",
+            "Pedicure & Manicure"
+          ]
+        },
+        {
+          "name": "Thai",
+          "groups": [
+            "Acrylic, Solar & Gel Extensions",
+            "Pedicure & Manicure"
+          ]
+        },
+        {
+          "name": "Tracy",
+          "groups": [
+            "Acrylic, Solar & Gel Extensions",
+            "Dipping Powder",
+            "Lash Extensions",
+            "Pedicure & Manicure"
+          ]
+        },
+        {
+          "name": "Yen",
+          "groups": [
+            "Acrylic, Solar & Gel Extensions",
+            "Dipping Powder",
+            "Lash Extensions",
+            "Pedicure & Manicure"
+          ]
+        }
+      ],
+      "menu": [
+        {
+          "group": "Acrylic, Solar & Gel Extensions",
+          "items": [
+            {
+              "name": "Gel‑X",
+              "min": 60,
+              "from": true,
+              "price": 67
+            },
+            {
+              "name": "Full Set with Shellac",
+              "min": 60,
+              "from": true,
+              "price": 57
+            },
+            {
+              "name": "Fill with Shellac",
+              "min": 60,
+              "from": true,
+              "price": 52
+            },
+            {
+              "name": "Full Set Ombré (Pink & White)",
+              "min": 75,
+              "from": true,
+              "price": 72
+            },
+            {
+              "name": "Fill Ombré (Pink & White)",
+              "min": 75,
+              "from": true,
+              "price": 62
+            },
+            {
+              "name": "Full Set Colour Powder",
+              "min": 75,
+              "from": true,
+              "price": 67
+            },
+            {
+              "name": "Fill Colour Powder",
+              "min": 75,
+              "from": true,
+              "price": 60
+            },
+            {
+              "name": "Full Set Ombré (Colour)",
+              "min": 60,
+              "from": false,
+              "price": 75
+            },
+            {
+              "name": "UV Gel Full Set with Colour",
+              "min": 75,
+              "from": true,
+              "price": 72
+            },
+            {
+              "name": "UV Gel Fill with Colour",
+              "min": 60,
+              "from": true,
+              "price": 70
+            },
+            {
+              "name": "Nail Repair",
+              "min": 15,
+              "from": true,
+              "price": 6
+            },
+            {
+              "name": "Acrylic Removal (add‑on)",
+              "min": 15,
+              "from": true,
+              "price": 10
+            },
+            {
+              "name": "Acrylic Nail Removal",
+              "min": 30,
+              "from": true,
+              "price": 20
+            }
+          ]
+        },
+        {
+          "group": "Pedicure & Manicure",
+          "items": [
+            {
+              "name": "Regular Manicure",
+              "min": 30,
+              "from": true,
+              "price": 26
+            },
+            {
+              "name": "Shellac Manicure",
+              "min": 60,
+              "from": true,
+              "price": 41
+            },
+            {
+              "name": "Regular Pedicure",
+              "min": 45,
+              "from": true,
+              "price": 37
+            },
+            {
+              "name": "Gel Pedicure",
+              "min": 60,
+              "from": true,
+              "price": 52
+            },
+            {
+              "name": "Pedicure & Manicure Combo (Regular Colour)",
+              "min": 75,
+              "from": true,
+              "price": 60
+            },
+            {
+              "name": "Pedicure + Gel Manicure",
+              "min": 75,
+              "from": true,
+              "price": 76
+            },
+            {
+              "name": "Manicure & Gel Pedicure",
+              "min": 75,
+              "from": true,
+              "price": 76
+            },
+            {
+              "name": "Gel Pedicure + Gel Manicure",
+              "min": 105,
+              "from": true,
+              "price": 86
+            },
+            {
+              "name": "Deluxe Manicure (Regular Colour)",
+              "min": 45,
+              "from": true,
+              "price": 46
+            },
+            {
+              "name": "Deluxe Pedicure (Regular Colour)",
+              "min": 60,
+              "from": true,
+              "price": 58
+            },
+            {
+              "name": "Deluxe Pedicure + Manicure",
+              "min": 105,
+              "from": true,
+              "price": 102
+            },
+            {
+              "name": "Nail Cut",
+              "min": 15,
+              "from": true,
+              "price": 12
+            },
+            {
+              "name": "Shellac Colour Change",
+              "min": 30,
+              "from": true,
+              "price": 31
+            },
+            {
+              "name": "Little Princess Manicure",
+              "min": 15,
+              "from": true,
+              "price": 20
+            },
+            {
+              "name": "Little Princess Pedicure",
+              "min": 30,
+              "from": true,
+              "price": 25
+            },
+            {
+              "name": "Little Princess Mani & Pedi (Regular Colour)",
+              "min": 45,
+              "from": true,
+              "price": 40
+            },
+            {
+              "name": "Regular Colour Change",
+              "min": 30,
+              "from": true,
+              "price": 21
+            },
+            {
+              "name": "Shellac Removal",
+              "min": 15,
+              "from": true,
+              "price": 15
+            },
+            {
+              "name": "Paraffin Wax Treatment",
+              "min": 15,
+              "from": true,
+              "price": 15
+            }
+          ]
+        },
+        {
+          "group": "Lash Extensions",
+          "items": [
+            {
+              "name": "Volume Set",
+              "min": 60,
+              "from": true,
+              "price": 120
+            },
+            {
+              "name": "Volume Fill",
+              "min": 60,
+              "from": true,
+              "price": 100
+            },
+            {
+              "name": "Hybrid Set",
+              "min": 60,
+              "from": false,
+              "price": 110
+            },
+            {
+              "name": "Hybrid Fill",
+              "min": 60,
+              "from": false,
+              "price": 90
+            },
+            {
+              "name": "Classic Set",
+              "min": 60,
+              "from": false,
+              "price": 100
+            },
+            {
+              "name": "Classic Fill",
+              "min": 60,
+              "from": false,
+              "price": 85
+            },
+            {
+              "name": "Mega Set",
+              "min": 120,
+              "from": false,
+              "price": 160
+            },
+            {
+              "name": "Mega Fill",
+              "min": 90,
+              "from": false,
+              "price": 130
+            },
+            {
+              "name": "Lash Extension Removal",
+              "min": 15,
+              "from": false,
+              "price": 20
+            }
+          ]
+        },
+        {
+          "group": "Dipping Powder",
+          "items": [
+            {
+              "name": "Dipping Colour without Manicure",
+              "min": 45,
+              "from": true,
+              "price": 47
+            },
+            {
+              "name": "Dipping Colour with Manicure",
+              "min": 60,
+              "from": true,
+              "price": 57
+            },
+            {
+              "name": "Dipping French Ombré without Manicure",
+              "min": 60,
+              "from": true,
+              "price": 57
+            },
+            {
+              "name": "Dipping French Ombré with Manicure",
+              "min": 75,
+              "from": true,
+              "price": 67
+            },
+            {
+              "name": "Dipping With Tips",
+              "min": 60,
+              "from": true,
+              "price": 67
+            },
+            {
+              "name": "Dipping Removal (add‑on)",
+              "min": 15,
+              "from": true,
+              "price": 5
+            },
+            {
+              "name": "Dipping Powder Removal",
+              "min": 30,
+              "from": true,
+              "price": 20
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "groups": 4,
+        "services": 48
+      },
+      "promotions": [
+        {
+          "name": "Happy Hour",
+          "amount": "10%",
+          "minimum": 40,
+          "days": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "birthday": false,
+          "detail": "Happy hour from 12pm–3pm.",
+          "from": "2026-05-20",
+          "to": "2027-05-20"
+        },
+        {
+          "name": "Every tenth visit",
+          "amount": "15%",
+          "minimum": 500,
+          "days": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "birthday": false,
+          "detail": "Get 15% off after every 10 visits.",
+          "from": "2026-05-20",
+          "to": "2028-05-20"
+        },
+        {
+          "name": "Birthday discount",
+          "amount": "10%",
+          "minimum": 0,
+          "days": [],
+          "birthday": true,
+          "detail": "Let's celebrate your birthday with our 10% off.",
+          "from": null,
+          "to": null
+        }
+      ]
+    },
+    "langley": {
+      "dash": "lavie-nail-lounge-langley",
+      "slug": "langley",
+      "name": "LaVie Nail Lounge Langley",
+      "short": "Langley",
+      "street": "8850 Walnut Grove Dr",
+      "locality": "Langley Twp",
+      "region": "BC",
+      "postal": "V1M 2C9",
+      "neighbourhood": "Walnut Grove, Langley",
+      "phoneDisplay": "604‑888‑1619",
+      "phoneTel": "+16048881619",
+      "phoneE164": "+1-604-888-1619",
+      "mapQuery": "8850+Walnut+Grove+Dr,+Langley+Twp,+BC+V1M+2C9",
+      "dirQuery": "8850+Walnut+Grove+Dr,+Langley+Twp,+BC+V1M+2C9",
+      "reviewQuery": "LaVie+Nail+Lounge+Langley+8850+Walnut+Grove+Dr+Langley+BC",
+      "img": "33",
+      "imgAlt": "Coral-pink ombré nails with a fine French line, a butterfly accent and scattered gems.",
+      "instagram": "https://www.instagram.com/lavie_nail_lounge21/",
+      "formerly": "3D Nails Spa",
+      "lead": "Our Walnut Grove studio in Langley Township, previously trading as 3D Nails Spa. The widest menu of the three, including children’s services and waxing.",
+      "nearby": "On Walnut Grove Drive in the Walnut Grove town centre.",
+      "booking": "https://www.dashbooking.com/salon/lavie-nail-lounge-langley/booking",
+      "hours": [
+        [
+          "10:00",
+          "18:00"
+        ],
+        [
+          "10:00",
+          "19:00"
+        ],
+        [
+          "10:00",
+          "19:00"
+        ],
+        [
+          "09:00",
+          "19:00"
+        ],
+        [
+          "10:00",
+          "19:00"
+        ],
+        [
+          "10:00",
+          "19:00"
+        ],
+        [
+          "09:00",
+          "18:00"
+        ]
+      ],
+      "rating": {
+        "value": 4.65,
+        "count": 259
+      },
+      "staff": [
+        {
+          "name": "Annie",
+          "groups": [
+            "Add-ons",
+            "Hello Kitty — under 8s",
+            "Nail Extensions",
+            "Pedicure & Manicure Packages",
+            "Pedicure & Manicure with Gel Colour",
+            "Waxing"
+          ]
+        },
+        {
+          "name": "Ava",
+          "groups": [
+            "Add-ons",
+            "Hello Kitty — under 8s",
+            "Nail Extensions",
+            "Pedicure & Manicure Packages",
+            "Pedicure & Manicure with Gel Colour"
+          ]
+        },
+        {
+          "name": "Cici",
+          "groups": [
+            "Add-ons",
+            "Hello Kitty — under 8s",
+            "Lash Extensions",
+            "Nail Extensions",
+            "Pedicure & Manicure Packages",
+            "Pedicure & Manicure with Gel Colour"
+          ]
+        },
+        {
+          "name": "Heidi",
+          "groups": [
+            "Add-ons",
+            "Hello Kitty — under 8s",
+            "Nail Extensions",
+            "Pedicure & Manicure Packages",
+            "Pedicure & Manicure with Gel Colour",
+            "Waxing"
+          ]
+        },
+        {
+          "name": "Julie Hang",
+          "groups": [
+            "Add-ons",
+            "Hello Kitty — under 8s",
+            "Nail Extensions",
+            "Pedicure & Manicure Packages",
+            "Pedicure & Manicure with Gel Colour",
+            "Waxing"
+          ]
+        },
+        {
+          "name": "Lisa",
+          "groups": [
+            "Hello Kitty — under 8s",
+            "Nail Extensions",
+            "Pedicure & Manicure Packages",
+            "Pedicure & Manicure with Gel Colour"
+          ]
+        },
+        {
+          "name": "Mia",
+          "groups": [
+            "Add-ons",
+            "Hello Kitty — under 8s",
+            "Nail Extensions",
+            "Pedicure & Manicure Packages",
+            "Pedicure & Manicure with Gel Colour"
+          ]
+        },
+        {
+          "name": "Nhi",
+          "groups": [
+            "Add-ons",
+            "Hello Kitty — under 8s",
+            "Lash Extensions",
+            "Nail Extensions",
+            "Pedicure & Manicure Packages",
+            "Pedicure & Manicure with Gel Colour",
+            "Waxing"
+          ]
+        },
+        {
+          "name": "Tina",
+          "groups": [
+            "Add-ons",
+            "Hello Kitty — under 8s",
+            "Lash Extensions",
+            "Nail Extensions",
+            "Pedicure & Manicure Packages",
+            "Pedicure & Manicure with Gel Colour",
+            "Waxing"
+          ]
+        },
+        {
+          "name": "Tony",
+          "groups": [
+            "Add-ons",
+            "Lash Extensions",
+            "Nail Extensions"
+          ]
+        }
+      ],
+      "menu": [
+        {
+          "group": "Nail Extensions",
+          "items": [
+            {
+              "name": "Gel‑X Full Set",
+              "min": 60,
+              "from": false,
+              "price": 70
+            },
+            {
+              "name": "Gel‑X Fill",
+              "min": 60,
+              "from": false,
+              "price": 65
+            },
+            {
+              "name": "Full Set Powder Colour",
+              "min": 60,
+              "from": false,
+              "price": 65
+            },
+            {
+              "name": "Fill Powder Colour",
+              "min": 60,
+              "from": false,
+              "price": 60
+            },
+            {
+              "name": "Full Set Ombré",
+              "min": 60,
+              "from": false,
+              "price": 70
+            },
+            {
+              "name": "Fill Ombré",
+              "min": 60,
+              "from": false,
+              "price": 65
+            },
+            {
+              "name": "Overlay Acrylic",
+              "min": 60,
+              "from": true,
+              "price": 60
+            },
+            {
+              "name": "Long Nails",
+              "min": 15,
+              "from": false,
+              "price": 10
+            },
+            {
+              "name": "UV Gel — Builder Gel Full Set",
+              "min": 75,
+              "from": false,
+              "price": 70
+            },
+            {
+              "name": "UV Gel — Builder Gel Fill",
+              "min": 60,
+              "from": false,
+              "price": 65
+            },
+            {
+              "name": "Overlay Gel — BIAB",
+              "min": 60,
+              "from": false,
+              "price": 60
+            }
+          ]
+        },
+        {
+          "group": "Pedicure & Manicure Packages",
+          "items": [
+            {
+              "name": "Spa Pedicure",
+              "min": 45,
+              "from": false,
+              "price": 37
+            },
+            {
+              "name": "Deluxe Pedicure",
+              "min": 75,
+              "from": false,
+              "price": 58
+            },
+            {
+              "name": "Regular Manicure",
+              "min": 30,
+              "from": false,
+              "price": 25
+            },
+            {
+              "name": "Deluxe Manicure",
+              "min": 30,
+              "from": false,
+              "price": 35
+            },
+            {
+              "name": "Manicure and Pedicure Combo",
+              "min": 75,
+              "from": false,
+              "price": 60
+            },
+            {
+              "name": "Deluxe Pedicure & Manicure",
+              "min": 90,
+              "from": false,
+              "price": 90
+            },
+            {
+              "name": "Cut Toe",
+              "min": 15,
+              "from": false,
+              "price": 15
+            },
+            {
+              "name": "Regular Polish",
+              "min": 15,
+              "from": false,
+              "price": 20
+            }
+          ]
+        },
+        {
+          "group": "Pedicure & Manicure with Gel Colour",
+          "items": [
+            {
+              "name": "Pedicure with Gel Colour",
+              "min": 60,
+              "from": false,
+              "price": 52
+            },
+            {
+              "name": "Manicure with Gel Colour",
+              "min": 45,
+              "from": false,
+              "price": 40
+            },
+            {
+              "name": "Pedicure and Manicure with Gel Colour",
+              "min": 90,
+              "from": false,
+              "price": 90
+            },
+            {
+              "name": "Colour Change with Gel",
+              "min": 30,
+              "from": false,
+              "price": 30
+            },
+            {
+              "name": "New Gel Colour (without Manicure)",
+              "min": 30,
+              "from": false,
+              "price": 25
+            },
+            {
+              "name": "Shellac / Gel Colour Take Off",
+              "min": 15,
+              "from": false,
+              "price": 15
+            }
+          ]
+        },
+        {
+          "group": "Lash Extensions",
+          "items": [
+            {
+              "name": "Volume Set",
+              "min": 75,
+              "from": false,
+              "price": 120
+            },
+            {
+              "name": "Volume Fill",
+              "min": 60,
+              "from": true,
+              "price": 100
+            },
+            {
+              "name": "Hybrid Set",
+              "min": 60,
+              "from": false,
+              "price": 110
+            },
+            {
+              "name": "Hybrid Fill",
+              "min": 60,
+              "from": false,
+              "price": 90
+            },
+            {
+              "name": "Classic Set",
+              "min": 60,
+              "from": false,
+              "price": 100
+            },
+            {
+              "name": "Classic Fill",
+              "min": 45,
+              "from": false,
+              "price": 85
+            },
+            {
+              "name": "Mega Set",
+              "min": 120,
+              "from": false,
+              "price": 155
+            },
+            {
+              "name": "Mega Fill",
+              "min": 90,
+              "from": false,
+              "price": 125
+            },
+            {
+              "name": "Removal",
+              "min": 30,
+              "from": false,
+              "price": 35
+            }
+          ]
+        },
+        {
+          "group": "Hello Kitty — under 8s",
+          "items": [
+            {
+              "name": "Pedicure for Kid",
+              "min": 30,
+              "from": false,
+              "price": 25
+            },
+            {
+              "name": "Manicure for Kid",
+              "min": 30,
+              "from": false,
+              "price": 20
+            },
+            {
+              "name": "Combo Pedicure + Manicure for Kid",
+              "min": 45,
+              "from": false,
+              "price": 45
+            },
+            {
+              "name": "Shellac Add for Kid",
+              "min": 15,
+              "from": false,
+              "price": 20
+            },
+            {
+              "name": "Polish Only for Kid",
+              "min": 15,
+              "from": false,
+              "price": 10
+            }
+          ]
+        },
+        {
+          "group": "Waxing",
+          "items": [
+            {
+              "name": "Brow Wax",
+              "min": 15,
+              "from": false,
+              "price": 12
+            },
+            {
+              "name": "Upper Lip Wax",
+              "min": 15,
+              "from": false,
+              "price": 6
+            },
+            {
+              "name": "Chin Wax",
+              "min": 15,
+              "from": false,
+              "price": 6
+            },
+            {
+              "name": "Full Arm Wax",
+              "min": 30,
+              "from": false,
+              "price": 35
+            },
+            {
+              "name": "Half Arm Wax",
+              "min": 30,
+              "from": false,
+              "price": 25
+            },
+            {
+              "name": "Full Leg Wax",
+              "min": 45,
+              "from": true,
+              "price": 50
+            },
+            {
+              "name": "Half Leg Wax",
+              "min": 30,
+              "from": false,
+              "price": 37
+            },
+            {
+              "name": "Underarm Wax",
+              "min": 30,
+              "from": false,
+              "price": 25
+            },
+            {
+              "name": "Bikini Wax",
+              "min": 30,
+              "from": false,
+              "price": 30
+            },
+            {
+              "name": "Brazilian Wax",
+              "min": 60,
+              "from": true,
+              "price": 60
+            },
+            {
+              "name": "Back Wax",
+              "min": 45,
+              "from": true,
+              "price": 45
+            }
+          ]
+        },
+        {
+          "group": "Add-ons",
+          "items": [
+            {
+              "name": "Long Nails",
+              "min": 15,
+              "from": false,
+              "price": 10
+            },
+            {
+              "name": "Take Off",
+              "min": 15,
+              "from": false,
+              "price": 20
+            },
+            {
+              "name": "Add Shellac",
+              "min": 15,
+              "from": false,
+              "price": 15
+            },
+            {
+              "name": "Diamond Add",
+              "min": 15,
+              "from": false,
+              "price": 10
+            },
+            {
+              "name": "Design",
+              "min": 15,
+              "from": false,
+              "price": 10
+            }
+          ]
+        }
+      ],
+      "counts": {
+        "groups": 7,
+        "services": 55
+      },
+      "promotions": []
+    }
+  }
+}

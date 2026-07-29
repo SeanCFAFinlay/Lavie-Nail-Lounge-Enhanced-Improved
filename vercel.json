@@ -1,0 +1,55 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/links", "destination": "/links.html" }
+  ],
+  "redirects": [
+    { "source": "/terms-and-conditions.html", "destination": "/terms.html", "permanent": true },
+    { "source": "/terms-and-conditions", "destination": "/terms.html", "permanent": true },
+    { "source": "/privacy-policy.html", "destination": "/privacy.html", "permanent": true },
+    { "source": "/privacy-policy", "destination": "/privacy.html", "permanent": true },
+
+    { "source": "/about.html", "destination": "/", "permanent": true },
+    { "source": "/payment.html", "destination": "/", "permanent": true },
+    { "source": "/contact.html", "destination": "/#studios", "permanent": true },
+    { "source": "/locations.html", "destination": "/#studios", "permanent": true },
+    { "source": "/gallery.html", "destination": "/#work", "permanent": true },
+    { "source": "/schedule.html", "destination": "/#book", "permanent": true },
+    { "source": "/team.html", "destination": "/fleetwood.html#team", "permanent": true },
+    { "source": "/products.html", "destination": "/services.html", "permanent": true },
+    { "source": "/colors.html", "destination": "/services.html", "permanent": true },
+    { "source": "/promotions.html", "destination": "/newton.html#offers", "permanent": true },
+
+    { "source": "/3d-nails-spa", "destination": "/langley.html", "permanent": true },
+    { "source": "/fleetwood", "destination": "/fleetwood.html", "permanent": true },
+    { "source": "/newton", "destination": "/newton.html", "permanent": true },
+    { "source": "/langley", "destination": "/langley.html", "permanent": true },
+    { "source": "/services", "destination": "/services.html", "permanent": true },
+    { "source": "/privacy", "destination": "/privacy.html", "permanent": true },
+    { "source": "/terms", "destination": "/terms.html", "permanent": true },
+    { "source": "/book", "destination": "/#book", "permanent": false }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
+      ]
+    },
+    {
+      "source": "/assets/img/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Content-Type", "value": "application/xml; charset=utf-8" }
+      ]
+    }
+  ]
+}
